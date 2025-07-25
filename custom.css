@@ -1,0 +1,164 @@
+/*
+# Custom Beeper app style
+This file will be injected as a <style> tag
+After making your changes, type "Reload custom CSS" in the command bar
+To open dev tools, open the command bar and type "open console"
+*/
+
+.BrandTooltip-module__container.sidebar-button.selected::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    border-radius: 4px;
+    width: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    background-color: #60CDFF;
+    animation: wui-h-center 0.3s 1;
+}
+.BrandTooltip-module__container.sidebar-button:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.BrandTooltip-module__container.sidebar-button.selected:focus {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0,95,186,0.08);
+}
+.sidebar-thread.isSelected::before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    border-radius: 4px;
+    width: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    background-color: #60CDFF;
+    animation: wui-h-center-2 0.3s 1;
+}
+.sidebar-thread:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+}
+.sidebar-thread {
+  border-radius: 4px !important;
+}
+.sidebar-thread.isSelected:focus {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0,95,186,0.08);
+  border-radius: 4px !important;
+}
+.filters-pane-list .sidebar-button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px !important;
+}
+
+.ThreadListItem-module__wrapper.ThreadListItem-module__isSelected::before {
+  border-radius: 4px !important;
+}
+
+@keyframes wui-h-center {
+    0% {
+        height: 5px
+    }
+
+    100% {
+        height: 17px;
+    }
+}
+
+@keyframes wui-w-center {
+    0% {
+        width: 4px;
+        left: calc(50% - 4px);
+    }
+
+    100% {
+        width: 16px;
+        left: calc(50% - 10px);
+    }
+}
+
+@keyframes wui-h-center-2 {
+    0% {
+        height: 5px
+    }
+
+    100% {
+        height: 34px;
+    }
+}
+
+@keyframes wui-w-center-2 {
+    0% {
+        width: 4px;
+        left: calc(50% - 4px);
+    }
+
+    100% {
+        width: 32px;
+        left: calc(50% - 10px);
+    }
+}
+
+.sidebar-button-container button {
+  width: 36px !important;
+  height: 32px !important;
+}
+.brand-combined-icon {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 auto !important;
+}
+
+.account-switcher {
+  padding: 0 !important;
+  width: 44px !important;
+}
+
+.account-container::after {
+  padding: 0% !important;
+}
+.sidebar-button-container {
+  height: auto !important;
+  width: 36px !important;
+  padding-bottom: 2px !important;
+  padding-top: 2px !important;
+  padding-right: 0 !important;
+}
+
+.modal-container.command-bar-modal {
+  justify-content: start !important;
+}
+
+.thread-header {
+  padding-left: 24px !important;
+  justify-content: start !important;
+  align-content: start !important;
+}
+.right-pane-header {
+  height: 64px !important;
+  padding-top: 8px !important;
+}
+
+.right-wrapper {
+  --frame-gap: 0px !important;
+  border-radius: 0% !important;
+  background: #282828 !important;
+}
+.right-wrapper.right.right-thread {
+  background: #282828 !important;
+}
+.right-wrapper .right.right-thread, .right-wrapper .right.right-prefs {
+  background: #282828 !important;
+}
+:root {
+  --color-base-black: #282828 !important;
+  --color-base-gray-30: #282828 !important;
+}
+
+.Sidebar-module__hoveringTrigger {
+  width: 0px !important;
+}
