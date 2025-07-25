@@ -154,6 +154,12 @@ To open dev tools, open the command bar and type "open console"
   -webkit-mask-image: none !important;
 }
 
+/* Fix for network icons appearing cut off */
+.ThreadListItem-module__platformIcon {
+  width: auto !important;
+  height: auto !important;
+}
+
 /*
   ------
   Command Bar / Search Bar
