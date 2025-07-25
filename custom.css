@@ -13,6 +13,15 @@ To open dev tools, open the command bar and type "open console"
 
 /*
   ------
+  Terrible tooltips
+  ------
+*/
+.BrandTooltip-module__tooltip {
+  display: none !important;
+}
+
+/*
+  ------
   Left sidebar with servers
   ------
 */
@@ -80,11 +89,74 @@ To open dev tools, open the command bar and type "open console"
   width: 0px !important;
 }
 
+/* Transition effect for footer buttons (settings and new account) */
+.left-pane-footer-buttons {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer icon sizes */
+.left-pane-footer-buttons>.BrandTooltip-module__container>button>svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Footer button size */
+.left-pane-footer-buttons>.BrandTooltip-module__container>button {
+  width: 36px !important;
+  height: 32px !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer button hover effect */
+.left-pane-footer-buttons>.BrandTooltip-module__container>button:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+}
+
+/* Transition and Border Radius when hovering icons */
+.filters-pane-list .sidebar-button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px !important;
+}
+
+/* 
+  ------
+  Message threads (chats) header
+  ------
+*/
+
+/* Hover effect for the tab bar (search and new chat) */
+.BrandTooltip-module__container.tab-bar-btn:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+  
+}
+
+/* Hover effect for the channel name in header */
+.CurrentAccount-module__sidebarHeader:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+}
+
+/* Channel name padding */
+.CurrentAccount-module__sidebarHeader {
+  padding: 8px !important;
+}
+
 /* 
   ------
   Left sidebar with message threads (chats)
   ------
 */
+
+/* Sidebar thread animation and border radius */
+.sidebar-thread {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+}
 
 /* Blue indicator when PINNED selected */
 .sidebar-thread.isSelected.isPinned::before {
@@ -126,12 +198,6 @@ To open dev tools, open the command bar and type "open console"
 .sidebar-thread:hover {
   backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px !important;
-}
-
-/* Transition and Border Radius when hovering chats */
-.filters-pane-list .sidebar-button {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   border-radius: 4px !important;
 }
 
