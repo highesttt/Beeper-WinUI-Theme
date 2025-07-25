@@ -166,6 +166,21 @@ To open dev tools, open the command bar and type "open console"
   border-radius: 4px !important;
 }
 
+/* Blue indicator when selecting a filter */
+.AccountFilters-module__selected::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    border-radius: 4px;
+    width: 16px;
+    bottom: 0px;
+    top: calc(100% - 3px);
+    transform: translateY(50%);
+    left: calc(50% - 16px / 2);
+    background-color: #60CDFF;
+    animation: wui-w-center-2 0.3s 1;
+}
+
 /* Sidebar thread animation and border radius */
 .sidebar-thread {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -309,6 +324,19 @@ To open dev tools, open the command bar and type "open console"
     100% {
         width: 34px;
         left: calc(50% - 17px);
+    }
+}
+
+/* Small horizontal center animation (filters) */
+@keyframes wui-w-center-2 {
+    0% {
+        width: 4px;
+        left: calc(50% - 4px);
+    }
+
+    100% {
+        width: 18px;
+        left: calc(50% - 9px);
     }
 }
 
