@@ -56,11 +56,17 @@ To open dev tools, open the command bar and type "open console"
   padding-right: 0 !important;
 }
 
-/* Icon Sizes */
-.brand-combined-icon {
+/* Icon sizes */
+.brand-combined-icon.BrandNetworkIcon-module__brandNetworkIcon {
   width: 18px !important;
   height: 18px !important;
   margin: 0 auto !important;
+}
+.brand-combined-icon.participant-img  {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 auto !important;
+  border-radius: 35% !important;
 }
 
 /* Sidebar size */
@@ -132,6 +138,20 @@ To open dev tools, open the command bar and type "open console"
 /* Border radius for selected chats */
 .ThreadListItem-module__wrapper.ThreadListItem-module__isSelected::before {
   border-radius: 4px !important;
+}
+
+/* Badge size */
+.account-badge-count {
+  min-width: 12px !important;
+  max-height: 12px !important;
+  font-size: xx-small !important;
+  z-index: 999 !important;
+}
+
+/* Remove mask from behind the badge */
+.BrandTooltip-module__container.sidebar-button {
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
 }
 
 /*
