@@ -152,6 +152,20 @@ To open dev tools, open the command bar and type "open console"
   ------
 */
 
+/* Hover effect for Inbox/Unread/Low Priority/Archived */
+.AccountFilters-module__button:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+}
+
+/* Focus effect for Inbox/Unread/Low Priority/Archived */
+.AccountFilters-module__selected {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0,95,186,0.08);
+  border-radius: 4px !important;
+}
+
 /* Sidebar thread animation and border radius */
 .sidebar-thread {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
