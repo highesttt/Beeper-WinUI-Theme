@@ -5,10 +5,14 @@ After making your changes, type "Reload custom CSS" in the command bar
 To open dev tools, open the command bar and type "open console"
 */
 
-/* Changed background color for dark mode */
+/* Changed colors and emojis */
 :root {
-  --color-base-black: #282828 !important;
-  --color-base-gray-30: #282828 !important;
+  --color-base-black: #202020 !important;
+  --color-base-gray-30: #202020 !important;
+  --font-family: "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  --color-primary: #5bbde9 !important;
+  --color-on-primary: #000 !important;
+  --color-highlight-reaction: #56add500 !important;
 }
 
 /*
@@ -57,12 +61,28 @@ To open dev tools, open the command bar and type "open console"
   width: 36px !important;
   height: 32px !important;
 }
+.sidebar-button.sidebar-button--fixed {
+  width: 36px !important;
+  height: 32px !important;
+}
 .sidebar-button-container {
   height: auto !important;
   width: 36px !important;
+  height: 32px !important;
   padding-bottom: 2px !important;
   padding-top: 2px !important;
   padding-right: 0 !important;
+}
+.sidebar-button.sidebar-button--fixed button {
+  width: 36px !important;
+  height: 32px !important;
+  border-radius: 4px;
+}
+
+/* Notification badge */
+
+.AccountBadge-module__dot {
+  color: var(--color-on-primary) !important;
 }
 
 /* Icon sizes */
@@ -81,7 +101,14 @@ To open dev tools, open the command bar and type "open console"
 /* Sidebar size */
 .account-switcher {
   padding: 0 !important;
+  padding-top: 6px !important;
   width: 44px !important;
+  gap: 4px !important;
+}
+
+/* Gap between accounts */
+.accounts {
+  gap: 4px !important;
 }
 
 /* Removed annoying hovering trigger that actually breaks hovering */
@@ -115,7 +142,7 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Transition and Border Radius when hovering icons */
-.filters-pane-list .sidebar-button {
+.sidebar-button {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   border-radius: 4px !important;
 }
@@ -154,16 +181,26 @@ To open dev tools, open the command bar and type "open console"
 
 /* Hover effect for Inbox/Unread/Low Priority/Archived */
 .AccountFilters-module__button:hover {
-  backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px !important;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Transition */
+.AccountFilters-module__button {
+  transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Focus effect for Inbox/Unread/Low Priority/Archived */
 .AccountFilters-module__selected {
-  backdrop-filter: blur(4px);
-  background-color: rgba(0,95,186,0.08);
-  border-radius: 4px !important;
+  backdrop-filter: blur(0px);
+  background-color: rgba(0,0,0,0);
+  background: rgba(0,0,0,0);
+}
+
+/* Remove the medium font from the selected filters */
+.AccountFilters-module__button.AccountFilters-module__selected {
+  background-color: rgba(0,0,0,0);
+  background: rgba(0,0,0,0);
+  font: inherit !important;
 }
 
 /* Blue indicator when selecting a filter */
@@ -255,6 +292,11 @@ To open dev tools, open the command bar and type "open console"
   height: auto !important;
 }
 
+/* Fix for unknown avatars showing a black image instead of white */
+.UnknownAvatar-module__foreground {
+  fill: white
+}
+
 /*
   ------
   Command Bar / Search Bar
@@ -278,6 +320,104 @@ To open dev tools, open the command bar and type "open console"
   border-radius: 0% !important;
 }
 
+/* Message bar */
+.ComposeMessage-module__input {
+  border-radius: 4px !important;
+  border: 2px solid #2e2e2f !important;
+  border-bottom: 2px solid #9a9a9a !important;
+  background-color: #2f2f2f !important;
+}
+.ComposeMessage-module__input:hover {
+  background-color: #333333 !important;
+}
+
+/* Message bar focus effect */
+:has(.ComposeMessage-module__textArea:focus) .ComposeMessage-module__input {
+  border-bottom: 2px solid #4cc2ff !important;
+  background-color: #202020 !important;
+}
+
+/* + buttons in the message bar */
+.BrandHiddenControls-module__toggle {
+  background-color: #2f2f2f !important;
+}
+.BrandHiddenControls-module__toggle:hover  {
+  background-color: #333333 !important;
+}
+
+/* Chat content size */
+.message-attachments .img, .message-attachments video, .message-attachments img {
+  border-radius: 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
+}
+.MessageContent-module__contents {
+  border-radius: 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
+}
+
+/* Emoji and Speaker icons in the message bar */
+.ComposeMessage-module__textAreaButtons {
+  padding-right: 8px !important;
+}
+
+/* Message background and shadow */
+.MessageContent-module__contents {
+  background: #353535 !important;
+  box-shadow: none !important;
+}
+
+/* Message as sender background */
+.MessageContent-module__isSender {
+  background: var(--color-primary) !important;
+}
+
+/* Fix for emojis appearing offcentered */
+.bubble-mode .type-emoji:not(.is-deleted) .message-contents {
+  padding: 4px !important;
+}
+
+/* Fix for message reactions */
+.message-reaction-container {
+  border: none !important;
+}
+
+/* disabled send button text color */
+.BrandSendButton-module__container:disabled svg,
+.BrandSendButton-module__container[disabled] svg,
+.BrandSendButton-module__container.disabled svg {
+  color: var(--color-on-tertiary-container);
+}
+
+/* Send button background color */
+.BrandSendButton-module__container:disabled {
+  background-color: #2f2f2f !important;
+}
+.BrandSendButton-module__container:enabled:hover {
+  background-color: #56add5 !important;
+}
+.BrandSendButton-module__container {
+  transition: background-color 0.2s ease;
+}
+
+/*
+  ------
+  Emoji Picker
+  ------
+*/
+
+/* Emoji picker selected state */
+.emoji-mart-anchor-selected {
+  color: #60CDFF !important;
+}
+.emoji-mart-anchor-bar {
+  background-color: #60CDFF !important;
+}
+
+/* Emoji picker fonts */
+:root:not(.is-mac) .emoji-mart-emoji-native {
+  font-family: "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+}
+
 /*
   ------
   Message Header (channel name, feedback button, info button)
@@ -295,6 +435,37 @@ To open dev tools, open the command bar and type "open console"
   padding-left: 24px !important;
   justify-content: start !important;
   align-content: start !important;
+}
+
+/* Chanel name hover effect & padding */
+.thread-header-left {
+  padding: 8px !important;
+}
+.thread-header-left:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+}
+
+/* Feedback button */
+.feedback-btn:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+}
+.feedback-btn {
+  transition: background-color 0.2s ease;
+}
+
+/* Info button */
+.toggle-thread-info {
+  color: white !important;
+  transition: color 0.2s ease;
+  padding-right: 4px;
+}
+
+.toggle-thread-info:hover {
+  backdrop-filter: blur(4px);
+  color: #a1a1a1 !important;
 }
 
 /*
