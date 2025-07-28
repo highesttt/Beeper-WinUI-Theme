@@ -1,4 +1,4 @@
-# Beeper WinUI 3 Theme (WORK IN PROGRESS) 🎨
+# Beeper WinUI 3 Theme 🎨
 
 </br>
 
@@ -6,13 +6,9 @@ This Beeper WinUI 3 Theme changes the theme of the Beeper Desktop application to
 
 ## Installation 🚀
 
-1. Clone the repository:
+1. Download the [latest](https://github.com/highesttt/Beeper-WinUI-Theme/releases/latest) release's custom.css file
 
-   ```bash
-   git clone https://github.com/highesttt/Beeper-WinUI-Theme.git
-   ```
-
-2. Copy the `custom.css` file to %AppData%\Roaming\BeeperTexts\custom.css
+2. Move the `custom.css` file to %AppData%\Roaming\BeeperTexts\custom.css
 
 3. Reload the application or reload the theme by doing one of the following:
 
