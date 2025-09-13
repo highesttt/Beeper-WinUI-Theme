@@ -23,7 +23,8 @@ If you have any suggestions for improvements or new features, feel free to open 
 ## Screenshots 🖼️
 <img width="2560" height="1392" alt="image" src="https://github.com/user-attachments/assets/845fe0a7-8a52-4edb-aedb-4cf2581e98a1" />
 <img width="786" height="733" alt="image" src="https://github.com/user-attachments/assets/cb2473e3-ba7e-45aa-99a2-e4689a3a1cbd" />
-<img width="2560" height="1392" alt="image" src="https://github.com/user-attachments/assets/4c60ce2b-0fc0-45b6-9ed2-29f77ba9643b" />
+<img width="290" height="523" alt="image" src="https://github.com/user-attachments/assets/33a94183-369b-4d01-8bbc-3b85b1fa084d" />
+
 
 
 ## Commit norms 📝
