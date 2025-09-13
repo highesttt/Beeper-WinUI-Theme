@@ -147,6 +147,20 @@ To open dev tools, open the command bar and type "open console"
   border-radius: 4px !important;
 }
 
+/* All Chats Menu */
+.menu-item.selected {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.brand-combined-icon.BrandNetworkIcon-module__brandNetworkIcon.AccountListPopupMenu-module__accountListPopupMenu {
+  width: 18px !important;
+  height: 18px !important;
+  margin-right: 4px !important;
+}
+
 /*
   ------
   Message threads (chats) header
@@ -411,17 +425,228 @@ To open dev tools, open the command bar and type "open console"
   ------
 */
 
-/* Emoji picker selected state */
+/* Main emoji picker container - Windows-style dark theme */
+.emoji-mart {
+  background-color: #2d2d30 !important;
+  border: 1px solid #464647 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Top navigation bar */
+.emoji-mart-bar {
+  background-color: #2d2d30 !important;
+  border-bottom: 1px solid #464647 !important;
+  padding: 8px 12px !important;
+}
+
+/* Bottom preview bar */
+.emoji-mart-preview {
+  height: 48px !important;
+}
+.emoji-mart-preview-name {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Category navigation buttons */
+.emoji-mart-anchors {
+  background-color: transparent !important;
+  gap: 4px !important;
+}
+.emoji-mart-anchor {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+  color: #cccccc !important;
+  transition: background-color 0.2s ease-out !important;
+  position: relative !important;
+}
+.emoji-mart-emoji:hover:before {
+  background-color: #404040 !important;
+  border-radius: 4px !important;
+}
+
+/* Initial state for all anchor indicators */
+.emoji-mart-anchor::before {
+  position: absolute !important;
+  content: "" !important;
+  height: 2px !important;
+  border-radius: 4px !important;
+  width: 4px !important;
+  bottom: 0px !important;
+  top: calc(100% - 3px) !important;
+  transform: translateY(50%) !important;
+  left: calc(50% - 2px) !important;
+  background-color: transparent !important;
+  transition: all 0.3s ease-out !important;
+}
+
+.emoji-mart-anchor:hover {
+  opacity: 0.7 !important;
+}
+
+/* Selected category button */
 .emoji-mart-anchor-selected {
-  color: #60CDFF !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  position: relative !important;
+}
+
+/* Blue indicator bar under selected category */
+.emoji-mart-anchor-selected::before {
+  position: absolute !important;
+  content: "" !important;
+  height: 4px !important;
+  border-radius: 4px !important;
+  width: 18px !important;
+  bottom: 0px !important;
+  top: calc(100% - 7px) !important;
+  transform: translateY(50%) !important;
+  left: calc(50% - 9px) !important;
+  background-color: #60CDFF !important;
+  transition: all 0.3s ease-out !important;
 }
 .emoji-mart-anchor-bar {
-  background-color: #60CDFF !important;
+  display: none !important;
+}
+
+/* Search section */
+.emoji-mart-search {
+  background-color: #2d2d30 !important;
+  padding: 12px !important;
+  border-bottom: 1px solid #464647 !important;
+  position: relative !important;
+}
+.emoji-mart-search input {
+  background-color: #2f2f2f !important;
+  border: 2px solid #2e2e2f !important;
+  border-bottom: 2px solid #9a9a9a !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  padding: 8px 12px 8px 36px !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+.emoji-mart-search input:hover {
+  background-color: #333333 !important;
+}
+.emoji-mart-search input::placeholder {
+  color: #999999 !important;
+}
+.emoji-mart-search input:focus {
+  border-bottom: 2px solid #4cc2ff !important;
+  background-color: #202020 !important;
+  outline: none !important;
+}
+
+/* Search icon inside textbox */
+.emoji-mart-search-icon {
+  left: -268px !important;
+  top: 20px !important;
+  pointer-events: none !important;
+  color: #999999 !important;
+  z-index: 2 !important;
+}
+
+.emoji-mart-search-icon svg {
+  width: 16px !important;
+  height: 16px !important;
+  fill: currentColor !important;
+}
+
+/* Emoji grid area */
+.emoji-mart-scroll {
+  background-color: #2d2d30 !important;
+  padding: 8px !important;
+}
+
+/* Category sections */
+.emoji-mart-category {
+  margin-bottom: 16px !important;
+}
+.emoji-mart-category-label {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 8px 4px 4px 4px !important;
+  letter-spacing: 0.5px !important;
+  position: relative !important;
+}
+.emoji-mart-category-label > span {
+  background-color: transparent !important;
+}
+
+/* Emoji grid */
+.emoji-mart-category-list {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 8px !important;
+}
+.emoji-mart-category-list li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Individual emoji buttons */
+.emoji-mart-emoji {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 6px !important;
+  cursor: pointer !important;
+  transition: background-color 0.15s ease-out !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  height: 42px !important;
+}
+.emoji-mart-emoji:hover {
+  background-color: #404040 !important;
+  border-radius: 4px !important;
+}
+
+/* Emoji characters */
+.emoji-mart-emoji span {
+  font-size: 26px !important;
+  line-height: 1 !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 4px !important;
+  padding: 6px !important;
 }
 
 /* Emoji picker fonts */
+@import url('https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css');
 :root:not(.is-mac) .emoji-mart-emoji-native {
-  font-family: "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  font-family: "Fluent Emoji Color",  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+}
+
+/* Scrollbar styling for emoji picker */
+.emoji-mart-scroll::-webkit-scrollbar {
+  width: 8px !important;
+}
+.emoji-mart-scroll::-webkit-scrollbar-track {
+  background-color: #2d2d30 !important;
+}
+.emoji-mart-scroll::-webkit-scrollbar-thumb {
+    background-color: #636363;
+  border-radius: 4px !important;
+}
+.emoji-mart-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #8f8f8f;
 }
 
 /*
