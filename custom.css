@@ -9,7 +9,7 @@ To open dev tools, open the command bar and type "open console"
 :root {
   --color-base-black: #202020 !important;
   --color-base-gray-30: #202020 !important;
-  --font-family: "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  --font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
   --color-primary: #5bbde9 !important;
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
@@ -32,22 +32,22 @@ To open dev tools, open the command bar and type "open console"
 
 /* Blue indicator when selected */
 .BrandTooltip-module__container.sidebar-button.selected::before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    border-radius: 4px;
-    width: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0px;
-    background-color: #60CDFF;
-    animation: wui-h-center 0.3s 1;
+  position: absolute;
+  content: "";
+  height: 16px;
+  border-radius: 4px;
+  width: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: #60cdff;
+  animation: wui-h-center 0.3s 1;
 }
 
 /* Focus effect when selected */
 .BrandTooltip-module__container.sidebar-button.selected:focus {
   backdrop-filter: blur(4px);
-  background-color: rgba(0,95,186,0.08);
+  background-color: rgba(0, 95, 186, 0.08);
 }
 
 /* Hover effect */
@@ -91,7 +91,7 @@ To open dev tools, open the command bar and type "open console"
   height: 18px !important;
   margin: 0 auto !important;
 }
-.brand-combined-icon.participant-img  {
+.brand-combined-icon.participant-img {
   width: 18px !important;
   height: 18px !important;
   margin: 0 auto !important;
@@ -122,20 +122,20 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Footer icon sizes */
-.left-pane-footer-buttons>.BrandTooltip-module__container>button>svg {
+.left-pane-footer-buttons > .BrandTooltip-module__container > button > svg {
   width: 16px !important;
   height: 16px !important;
 }
 
 /* Footer button size */
-.left-pane-footer-buttons>.BrandTooltip-module__container>button {
+.left-pane-footer-buttons > .BrandTooltip-module__container > button {
   width: 36px !important;
   height: 32px !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 /* Footer button hover effect */
-.left-pane-footer-buttons>.BrandTooltip-module__container>button:hover {
+.left-pane-footer-buttons > .BrandTooltip-module__container > button:hover {
   backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px !important;
@@ -205,30 +205,30 @@ To open dev tools, open the command bar and type "open console"
 /* Focus effect for Inbox/Unread/Low Priority/Archived */
 .AccountFilters-module__selected {
   backdrop-filter: blur(0px);
-  background-color: rgba(0,0,0,0);
-  background: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Remove the medium font from the selected filters */
 .AccountFilters-module__button.AccountFilters-module__selected {
-  background-color: rgba(0,0,0,0);
-  background: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
   font: inherit !important;
 }
 
 /* Blue indicator when selecting a filter */
 .AccountFilters-module__selected::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    border-radius: 4px;
-    width: 16px;
-    bottom: 0px;
-    top: calc(100% - 3px);
-    transform: translateY(50%);
-    left: calc(50% - 16px / 2);
-    background-color: #60CDFF;
-    animation: wui-w-center-2 0.3s 1;
+  position: absolute;
+  content: "";
+  height: 2px;
+  border-radius: 4px;
+  width: 16px;
+  bottom: 0px;
+  top: calc(100% - 3px);
+  transform: translateY(50%);
+  left: calc(50% - 16px / 2);
+  background-color: #60cdff;
+  animation: wui-w-center-2 0.3s 1;
 }
 
 /* Sidebar thread animation and border radius */
@@ -239,37 +239,37 @@ To open dev tools, open the command bar and type "open console"
 
 /* Blue indicator when PINNED selected */
 .sidebar-thread.isSelected.isPinned::before {
-    position: absolute;
-    content: "";
-    height: 4px;
-    border-radius: 4px;
-    width: 32px;
-    bottom: 0px;
-    top: calc(100% - 6px);
-    transform: translateY(50%);
-    left: calc(50% - 32px / 2);
-    background-color: #60CDFF;
-    animation: wui-w-center 0.3s 1;
+  position: absolute;
+  content: "";
+  height: 4px;
+  border-radius: 4px;
+  width: 32px;
+  bottom: 0px;
+  top: calc(100% - 6px);
+  transform: translateY(50%);
+  left: calc(50% - 32px / 2);
+  background-color: #60cdff;
+  animation: wui-w-center 0.3s 1;
 }
 
 /* Blue indicator when selected in main chats */
 .sidebar-thread.isSelected::before {
-    position: absolute;
-    content: "";
-    height: 32px;
-    border-radius: 4px;
-    width: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0px;
-    background-color: #60CDFF;
-    animation: wui-h-center-2 0.3s 1;
+  position: absolute;
+  content: "";
+  height: 32px;
+  border-radius: 4px;
+  width: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: #60cdff;
+  animation: wui-h-center-2 0.3s 1;
 }
 
 /* Focus effect when selected */
 .sidebar-thread.isSelected:focus {
   backdrop-filter: blur(4px);
-  background-color: rgba(0,95,186,0.08);
+  background-color: rgba(0, 95, 186, 0.08);
   border-radius: 4px !important;
 }
 
@@ -314,7 +314,7 @@ To open dev tools, open the command bar and type "open console"
 
 /* Fix for unknown avatars showing a black image instead of white */
 .UnknownAvatar-module__foreground {
-  fill: white
+  fill: white;
 }
 
 /*
@@ -361,12 +361,14 @@ To open dev tools, open the command bar and type "open console"
 .BrandHiddenControls-module__toggle {
   background-color: #2f2f2f !important;
 }
-.BrandHiddenControls-module__toggle:hover  {
+.BrandHiddenControls-module__toggle:hover {
   background-color: #333333 !important;
 }
 
 /* Chat content size */
-.message-attachments .img, .message-attachments video, .message-attachments img {
+.message-attachments .img,
+.message-attachments video,
+.message-attachments img {
   border-radius: 8px !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
 }
@@ -507,7 +509,7 @@ To open dev tools, open the command bar and type "open console"
   top: calc(100% - 7px) !important;
   transform: translateY(50%) !important;
   left: calc(50% - 9px) !important;
-  background-color: #60CDFF !important;
+  background-color: #60cdff !important;
   transition: all 0.3s ease-out !important;
 }
 .emoji-mart-anchor-bar {
@@ -629,9 +631,10 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Emoji picker fonts */
-@import url('https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css');
+@import url("https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css");
 :root:not(.is-mac) .emoji-mart-emoji-native {
-  font-family: "Fluent Emoji Color",  "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  font-family: "Fluent Emoji Color", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif !important;
 }
 
 /* Scrollbar styling for emoji picker */
@@ -642,11 +645,11 @@ To open dev tools, open the command bar and type "open console"
   background-color: #2d2d30 !important;
 }
 .emoji-mart-scroll::-webkit-scrollbar-thumb {
-    background-color: #636363;
+  background-color: #636363;
   border-radius: 4px !important;
 }
 .emoji-mart-scroll::-webkit-scrollbar-thumb:hover {
-    background-color: #8f8f8f;
+  background-color: #8f8f8f;
 }
 
 /*
@@ -735,17 +738,23 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Media section */
-.thread-info>.BrandExpandableSection-module__container {
+.thread-info > .BrandExpandableSection-module__container {
   padding-top: 8px !important;
   gap: 8px !important;
 }
-.thread-info>.BrandExpandableSection-module__container>.BrandExpandableSection-module__header>.BrandButton-module__link {
+.thread-info
+  > .BrandExpandableSection-module__container
+  > .BrandExpandableSection-module__header
+  > .BrandButton-module__link {
   border-radius: 4px !important;
   transition: color 0.2s ease-out;
   color: var(--color-on-surface) !important;
 }
-.thread-info>.BrandExpandableSection-module__container>.BrandExpandableSection-module__header>.BrandButton-module__link:hover {
-  color: #60CDFF !important;
+.thread-info
+  > .BrandExpandableSection-module__container
+  > .BrandExpandableSection-module__header
+  > .BrandButton-module__link:hover {
+  color: #60cdff !important;
 }
 .BrandChatInfoPaneMedia-module__media {
   border-radius: 8px !important;
@@ -769,7 +778,7 @@ To open dev tools, open the command bar and type "open console"
 */
 
 /* remove corner radius */
-.right-wrapper>.right-prefs {
+.right-wrapper > .right-prefs {
   border-radius: 0% !important;
 }
 .prefs-view-settings {
@@ -794,7 +803,7 @@ To open dev tools, open the command bar and type "open console"
 /* remove background color from pref-icon and style SVG paths */
 .pref-icon {
   background-color: transparent !important;
-  color: var(--color-solids-violet)  !important;
+  color: var(--color-solids-violet) !important;
 }
 
 /* Style SVG paths inside pref-icon to inherit the original background color */
@@ -844,7 +853,7 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Notification icon color */
-.pref-option>.tag {
+.pref-option > .tag {
   background-color: var(--color-primary) !important;
   color: var(--color-on-primary) !important;
 }
@@ -867,22 +876,22 @@ To open dev tools, open the command bar and type "open console"
 
 /* Blue indicator when preference option is selected */
 .pref-option.selected::before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    border-radius: 4px;
-    width: 3px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0px;
-    background-color: #60CDFF;
-    animation: wui-h-center 0.3s 1;
+  position: absolute;
+  content: "";
+  height: 16px;
+  border-radius: 4px;
+  width: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  background-color: #60cdff;
+  animation: wui-h-center 0.3s 1;
 }
 
 /* Focus effect when preference option is selected */
 .pref-option.selected:focus {
   backdrop-filter: blur(4px);
-  background-color: rgba(0,95,186,0.08);
+  background-color: rgba(0, 95, 186, 0.08);
   border-radius: 4px !important;
 }
 
@@ -916,7 +925,7 @@ To open dev tools, open the command bar and type "open console"
   filter: none !important;
   border-radius: 0% !important;
 }
-.prefs-right-pane>.subview-prefs > h4 {
+.prefs-right-pane > .subview-prefs > h4 {
   color: white !important;
   padding: 0 0 0 0 !important;
   padding-bottom: 4px !important;
@@ -928,26 +937,34 @@ To open dev tools, open the command bar and type "open console"
   gap: 1px !important;
 }
 
-.prefs-group>.label-wrapper > label > div:first-child {
+.prefs-group > .label-wrapper > label > div:first-child {
   color: white !important;
   font-weight: 500 !important;
 }
 
 /* Plus tag in preferences */
-.prefs-group>.label-wrapper > label > div > .PlusPill-module__standard.plus-tag {
+.prefs-group
+  > .label-wrapper
+  > label
+  > div
+  > .PlusPill-module__standard.plus-tag {
   background-color: var(--color-primary) !important;
   color: var(--color-on-primary) !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
-.prefs-group>.label-wrapper > label > div > .PlusPill-module__standard.plus-tag:hover {
+.prefs-group
+  > .label-wrapper
+  > label
+  > div
+  > .PlusPill-module__standard.plus-tag:hover {
   background-color: #49b3ea !important;
   color: var(--color-on-primary) !important;
 }
 
-.prefs-group>.label-wrapper>.description-text {
+.prefs-group > .label-wrapper > .description-text {
   font-weight: 500 !important;
 }
-.prefs-group>.label-wrapper {
+.prefs-group > .label-wrapper {
   padding-top: 8px !important;
   padding-bottom: 4px !important;
   font-weight: bold !important;
@@ -957,7 +974,7 @@ To open dev tools, open the command bar and type "open console"
   background-color: #2b2b2b !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 }
-.prefs-group>.label-wrapper:hover {
+.prefs-group > .label-wrapper:hover {
   backdrop-filter: blur(4px);
   background-color: #323232 !important;
   overflow: hidden !important;
@@ -986,6 +1003,27 @@ To open dev tools, open the command bar and type "open console"
   height: 16px;
 }
 
+/*
+  ------
+  Notification preferences
+  ------
+*/
+.notification-prefs-account {
+  backdrop-filter: blur(4px);
+  background-color: #2b2b2b !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.notification-prefs-account-header {
+  display: flex !important;
+  width: 100% !important;
+  gap: 8px !important;
+}
+.notification-prefs-account-header
+  > .brand-combined-icon.BrandNetworkIcon-module__brandNetworkIcon {
+  margin: 0 !important;
+}
 /*
   ------
   Toasts
@@ -1023,7 +1061,7 @@ To open dev tools, open the command bar and type "open console"
   color: #ffffff;
   margin-bottom: 4px;
   padding-left: 24px;
-  background-image: url('https://www.google.com/s2/favicons?domain=beeper.com&sz=16');
+  background-image: url("https://www.google.com/s2/favicons?domain=beeper.com&sz=16");
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: left center;
@@ -1105,87 +1143,124 @@ To open dev tools, open the command bar and type "open console"
 
 /* Switches */
 .switch {
-    margin: 3px 3px;
-    position: relative;
-    display: inline-block;
-    width: 42px;
-    height: 21px;
-    border: 0.08rem solid rgb(133, 133, 133);
-    cursor: pointer;
-    background-color: #24282b;
-    border-radius: 34px;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+  margin: 3px 3px;
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 21px;
+  border: 0.08rem solid rgb(133, 133, 133);
+  cursor: pointer;
+  background-color: #24282b;
+  border-radius: 34px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .switch:hover {
-    background-color: #3b3b3b;
+  background-color: #3b3b3b;
 }
 
 .switch .knob {
-    position: absolute;
-    content: "";
-    height: 13px;
-    width: 13px;
-    left: 3px;
-    transform: translateY(-50%);
-    top: 50%;
-    background-color: #d2d2d2;
-    border-radius: 50%;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 3px;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: #d2d2d2;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .switch:hover .knob {
-    height: 14.5px;
-    width: 14.5px;
+  height: 14.5px;
+  width: 14.5px;
 }
 .switch:active .knob {
-    width: 16px;
+  width: 16px;
 }
 
 /* Switch ON state */
 .switch.on {
-    border: 0;
-    background-color: #5bbde9;
+  border: 0;
+  background-color: #5bbde9;
 }
 .switch.on:hover {
-    background-color: #49b3ea;
+  background-color: #49b3ea;
 }
 
 .switch.on .knob {
-    position: absolute;
-    transform: translateY(-50%);
-    left: 24px;
-    top: 50%;
-    background-color: #000000;
+  position: absolute;
+  transform: translateY(-50%);
+  left: 24px;
+  top: 50%;
+  background-color: #000000;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #636363;
-    border-radius: 4px;
+  background-color: #636363;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #8f8f8f;
+  background-color: #8f8f8f;
 }
 
 /* Dropdown Menus */
-.prefs-group>.label-wrapper > label > select {
-    background-color: #373737 !important;
-    border: 2px solid #3a3a3a !important;
-    border-radius: 4px !important;
-    color: white !important;
-    padding: 4px !important;
-    height: 32px !important;
-    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
-    /* capitalize the first character */
-    text-transform: capitalize !important;
+.prefs-group > .label-wrapper > label > select {
+  background-color: #373737 !important;
+  border: 2px solid #3a3a3a !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 4px !important;
+  height: 32px !important;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  /* capitalize the first character */
+  text-transform: capitalize !important;
 }
-.prefs-group>.label-wrapper > label > select:hover {
-    background-color: #3c3c3c !important;
+.prefs-group > .label-wrapper > label > select:hover {
+  background-color: #3c3c3c !important;
+}
+
+/* Slider */
+.slider-wrapper {
+  backdrop-filter: blur(4px);
+  background-color: #2b2b2b !important;
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 0px;
+  background: transparent;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background: #ccc;
+  border-radius: 16px;
+  overflow: hidden;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  width: 6px;
+  background-color: var(--color-primary);
+  border-radius: 100%;
+  border: 2px solid var(--color-primary);
+  box-shadow: -400px 0 0 400px var(--color-primary);
 }
 
 /*
@@ -1196,48 +1271,48 @@ To open dev tools, open the command bar and type "open console"
 
 /* Small vertical center animation (servers) */
 @keyframes wui-h-center {
-    0% {
-        height: 5px
-    }
+  0% {
+    height: 5px;
+  }
 
-    100% {
-        height: 18px;
-    }
+  100% {
+    height: 18px;
+  }
 }
 
 /* Small horizontal center animation (pinned chats) */
 @keyframes wui-w-center {
-    0% {
-        width: 4px;
-        left: calc(50% - 4px);
-    }
+  0% {
+    width: 4px;
+    left: calc(50% - 4px);
+  }
 
-    100% {
-        width: 34px;
-        left: calc(50% - 17px);
-    }
+  100% {
+    width: 34px;
+    left: calc(50% - 17px);
+  }
 }
 
 /* Small horizontal center animation (filters) */
 @keyframes wui-w-center-2 {
-    0% {
-        width: 4px;
-        left: calc(50% - 4px);
-    }
+  0% {
+    width: 4px;
+    left: calc(50% - 4px);
+  }
 
-    100% {
-        width: 18px;
-        left: calc(50% - 9px);
-    }
+  100% {
+    width: 18px;
+    left: calc(50% - 9px);
+  }
 }
 
 /* Small vertical center animation (main chats) */
 @keyframes wui-h-center-2 {
-    0% {
-        height: 5px
-    }
+  0% {
+    height: 5px;
+  }
 
-    100% {
-        height: 34px;
-    }
+  100% {
+    height: 34px;
+  }
 }
