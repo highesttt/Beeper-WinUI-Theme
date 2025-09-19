@@ -21,11 +21,27 @@ This Beeper WinUI 3 Theme changes the theme of the Beeper Desktop application to
 If you have any suggestions for improvements or new features, feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/highesttt/Beeper-WinUI-Theme).
 
 ## Screenshots 🖼️
-<img width="2560" height="1392" alt="image" src="https://github.com/user-attachments/assets/845fe0a7-8a52-4edb-aedb-4cf2581e98a1" />
-<img width="786" height="733" alt="image" src="https://github.com/user-attachments/assets/cb2473e3-ba7e-45aa-99a2-e4689a3a1cbd" />
-<img width="290" height="523" alt="image" src="https://github.com/user-attachments/assets/33a94183-369b-4d01-8bbc-3b85b1fa084d" />
 
-
+<table>
+  <tr>
+    <td colspan="3" align="center">
+      <img src="https://github.com/user-attachments/assets/07a75772-f05f-4552-b2c7-906ccb4aecec" width="800" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <div>
+        <img src="https://github.com/user-attachments/assets/cb2473e3-ba7e-45aa-99a2-e4689a3a1cbd" width="400" />
+      </div>
+      <div>
+        <img src="https://github.com/user-attachments/assets/b9b6099e-0c44-4ae4-9905-c368b2696df5" width="400" />
+      </div>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/05a02977-68a4-4cfe-96e7-aa644a409361" width="400" />
+    </td>
+  </tr>
+</table>
 
 ## Commit norms 📝
 
