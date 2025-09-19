@@ -960,6 +960,117 @@ To open dev tools, open the command bar and type "open console"
 
 /*
   ------
+  Toasts
+  ------
+*/
+
+.toasts-list.position-top-left,
+.toasts-list.position-bottom-left {
+  right: -8px !important;
+  left: auto !important;
+}
+
+.position-bottom-left.toasts-list {
+  width: auto !important;
+  align-items: flex-end !important;
+}
+
+.Toasts-module__container {
+  padding: 16px !important;
+  border-radius: 4px !important;
+  -webkit-backdrop-filter: blur(30px) saturate(125%);
+  backdrop-filter: blur(30px) saturate(125%);
+  background-color: rgba(32, 32, 32, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.Toasts-module__content::before {
+  content: "Beeper" !important;
+  display: inline-flex;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 4px;
+  padding-left: 24px;
+  background-image: url('https://www.google.com/s2/favicons?domain=beeper.com&sz=16');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left center;
+}
+
+.Toasts-module__content > span {
+  display: block;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #d0d0d0;
+  line-height: 1.4;
+}
+
+.Toasts-module__toastButtons {
+  font-size: 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.Toasts-module__toastButtons button {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #f3f3f3;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.Toasts-module__toastButtons button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.Toasts-module__toastButtons button:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.Toasts-module__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.Toasts-module__close:hover {
+  opacity: 1;
+}
+
+/* Scale down on press */
+.Toasts-module__close:active {
+  transform: scale(0.9);
+}
+
+.Toasts-module__container:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+  transition: toastSlideOut 300ms ease forwards;
+}
+
+/*
+  ------
   Components
   ------
 */
