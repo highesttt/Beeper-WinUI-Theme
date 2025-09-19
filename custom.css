@@ -833,6 +833,15 @@ To open dev tools, open the command bar and type "open console"
 .pref-icon[style*="rgb(117, 89, 255)"] svg path {
   color: rgb(117, 89, 255) !important;
 }
+.pref-icon[style*="rgb(183, 52, 244)"] svg path {
+  color: rgb(183, 52, 244) !important;
+}
+.pref-icon[style*="rgb(50, 84, 106)"] svg path {
+  fill: rgb(50, 84, 106) !important;
+}
+.pref-icon[style*="rgb(255, 99, 99)"] svg path {
+  fill: rgb(255, 99, 99) !important;
+}
 
 /* Notification icon color */
 .pref-option>.tag {
@@ -849,7 +858,7 @@ To open dev tools, open the command bar and type "open console"
   margin-bottom: 2px !important;
   border-bottom: 0px !important;
 }
-.pref-option:first-child {
+.pref-option-profile {
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   height: 48px !important;
@@ -956,6 +965,25 @@ To open dev tools, open the command bar and type "open console"
 
 .prefs-group:not(:empty) {
   border-radius: 4px !important;
+}
+
+/*
+  ------
+  Install Browser extensions
+  ------
+*/
+.subview-prefs-browser-ext a {
+  font-size: 100% !important;
+  /* remove the old display property */
+  display: flex !important;
+  text-align: center !important;
+  justify-content: start !important;
+  padding: 0 !important;
+  padding-left: 8px !important;
+  align-items: center !important;
+}
+.subview-prefs-browser-ext img:not(.browser-ext-screenshot) {
+  height: 16px;
 }
 
 /*
@@ -1153,6 +1181,8 @@ To open dev tools, open the command bar and type "open console"
     padding: 4px !important;
     height: 32px !important;
     transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+    /* capitalize the first character */
+    text-transform: capitalize !important;
 }
 .prefs-group>.label-wrapper > label > select:hover {
     background-color: #3c3c3c !important;
