@@ -7,10 +7,17 @@ To open dev tools, open the command bar and type "open console"
 
 /* Changed colors and emojis */
 :root {
-  --color-base-black: #202020 !important;
-  --color-base-gray-30: #202020 !important;
+  /* Change your colors here */
+  --color-primary: #4cc2ff !important;
+  --color-primary-hover: #49b3ea !important;
+  --color-border: #3f9aca !important;
+  --color-base-black: #1f2021 !important; /* #1f2021 */
+  --color-item-background: #2b2b2b !important;
+  --color-item-background-hover: #323232 !important;
+  --color-item-background-border: #1a1e20 !important;
+
+  --color-base-gray-30: var(--color-base-black) !important;
   --font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
-  --color-primary: #5bbde9 !important;
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
 }
@@ -39,8 +46,9 @@ To open dev tools, open the command bar and type "open console"
   width: 2px;
   top: 50%;
   transform: translateY(-50%);
+  font-weight: 400 !important;
   left: 0px;
-  background-color: #60cdff;
+  background-color: var(--color-primary);
   animation: wui-h-center 0.3s 1;
 }
 
@@ -53,7 +61,7 @@ To open dev tools, open the command bar and type "open console"
 /* Hover effect */
 .BrandTooltip-module__container.sidebar-button:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
 }
 
 /* Button Sizes */
@@ -137,7 +145,7 @@ To open dev tools, open the command bar and type "open console"
 /* Footer button hover effect */
 .left-pane-footer-buttons > .BrandTooltip-module__container > button:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
@@ -150,7 +158,7 @@ To open dev tools, open the command bar and type "open console"
 /* All Chats Menu */
 .menu-item.selected {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
   transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
@@ -170,14 +178,14 @@ To open dev tools, open the command bar and type "open console"
 /* Hover effect for the tab bar (search and new chat) */
 .BrandTooltip-module__container.tab-bar-btn:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
 /* Hover effect for the channel name in header */
 .CurrentAccount-module__sidebarHeader:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
@@ -227,8 +235,34 @@ To open dev tools, open the command bar and type "open console"
   top: calc(100% - 3px);
   transform: translateY(50%);
   left: calc(50% - 16px / 2);
-  background-color: #60cdff;
+  background-color: var(--color-primary);
   animation: wui-w-center-2 0.3s 1;
+}
+
+/* Filter */
+.AccountFilters-module__folders {
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  border-radius: 4px !important;
+  gap: 4px !important;
+  display: flex !important;
+}
+
+.AccountFilters-module__buttonContainer {
+  border-radius: 4px !important;
+  font-weight: 400 !important;
+}
+.AccountFilters-module__buttonContainer:active {
+  font-weight: 400 !important;
+}
+
+.AccountFilters-module__buttonContainer.AccountFilters-module__selected .AccountFilters-module__labelButton {
+  font-weight: 400 !important;
+}
+
+.AccountFilters-module__buttonContainer:hover {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background-hover) !important;
+  border-radius: 4px !important;
 }
 
 /* Sidebar thread animation and border radius */
@@ -248,7 +282,7 @@ To open dev tools, open the command bar and type "open console"
   top: calc(100% - 6px);
   transform: translateY(50%);
   left: calc(50% - 32px / 2);
-  background-color: #60cdff;
+  background-color: var(--color-primary);
   animation: wui-w-center 0.3s 1;
 }
 
@@ -262,7 +296,7 @@ To open dev tools, open the command bar and type "open console"
   top: 50%;
   transform: translateY(-50%);
   left: 0px;
-  background-color: #60cdff;
+  background-color: var(--color-primary);
   animation: wui-h-center-2 0.3s 1;
 }
 
@@ -276,7 +310,7 @@ To open dev tools, open the command bar and type "open console"
 /* Hover effect */
 .sidebar-thread:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
@@ -343,7 +377,7 @@ To open dev tools, open the command bar and type "open console"
 /* Message bar */
 .ComposeMessage-module__input {
   border-radius: 4px !important;
-  border: 2px solid #2e2e2f !important;
+  border: 1px solid #2e2e2f !important;
   border-bottom: 2px solid #9a9a9a !important;
   background-color: #2f2f2f !important;
 }
@@ -352,9 +386,18 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Message bar focus effect */
-:has(.ComposeMessage-module__textArea:focus) .ComposeMessage-module__input {
-  border-bottom: 2px solid #4cc2ff !important;
-  background-color: #202020 !important;
+:has(.ProseMirror-focused) .ComposeMessage-module__input {
+  border-bottom: 2px solid var(--color-primary) !important;
+  background-color: var(--color-base-black) !important;
+}
+
+/* Replies */
+.LinkedMessage-module__linkedMessageContent {
+  border-radius: 4px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
+}
+.LinkedMessage-module__linkedMessage > svg:hover {
+  cursor: pointer !important;
 }
 
 /* + buttons in the message bar */
@@ -369,17 +412,17 @@ To open dev tools, open the command bar and type "open console"
 .message-attachments .img,
 .message-attachments video,
 .message-attachments img {
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
 }
 .MessageContent-module__contents {
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
 }
 
 /* Emoji and Speaker icons in the message bar */
 .ComposeMessage-module__textAreaButtons {
-  padding-right: 8px !important;
+  padding-right: 4px !important;
 }
 
 /* Message background and shadow */
@@ -423,237 +466,6 @@ To open dev tools, open the command bar and type "open console"
 
 /*
   ------
-  Emoji Picker
-  ------
-*/
-
-/* Main emoji picker container - Windows-style dark theme */
-.emoji-mart {
-  background-color: #2d2d30 !important;
-  border: 1px solid #464647 !important;
-  border-radius: 8px !important;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-}
-
-/* Top navigation bar */
-.emoji-mart-bar {
-  background-color: #2d2d30 !important;
-  border-bottom: 1px solid #464647 !important;
-  padding: 8px 12px !important;
-}
-
-/* Bottom preview bar */
-.emoji-mart-preview {
-  height: 48px !important;
-}
-.emoji-mart-preview-name {
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-/* Category navigation buttons */
-.emoji-mart-anchors {
-  background-color: transparent !important;
-  gap: 4px !important;
-}
-.emoji-mart-anchor {
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 4px !important;
-  padding: 8px !important;
-  color: #cccccc !important;
-  transition: background-color 0.2s ease-out !important;
-  position: relative !important;
-}
-.emoji-mart-emoji:hover:before {
-  background-color: #404040 !important;
-  border-radius: 4px !important;
-}
-
-/* Initial state for all anchor indicators */
-.emoji-mart-anchor::before {
-  position: absolute !important;
-  content: "" !important;
-  height: 2px !important;
-  border-radius: 4px !important;
-  width: 4px !important;
-  bottom: 0px !important;
-  top: calc(100% - 3px) !important;
-  transform: translateY(50%) !important;
-  left: calc(50% - 2px) !important;
-  background-color: transparent !important;
-  transition: all 0.3s ease-out !important;
-}
-
-.emoji-mart-anchor:hover {
-  opacity: 0.7 !important;
-}
-
-/* Selected category button */
-.emoji-mart-anchor-selected {
-  background-color: transparent !important;
-  color: #ffffff !important;
-  position: relative !important;
-}
-
-/* Blue indicator bar under selected category */
-.emoji-mart-anchor-selected::before {
-  position: absolute !important;
-  content: "" !important;
-  height: 4px !important;
-  border-radius: 4px !important;
-  width: 18px !important;
-  bottom: 0px !important;
-  top: calc(100% - 7px) !important;
-  transform: translateY(50%) !important;
-  left: calc(50% - 9px) !important;
-  background-color: #60cdff !important;
-  transition: all 0.3s ease-out !important;
-}
-.emoji-mart-anchor-bar {
-  display: none !important;
-}
-
-/* Search section */
-.emoji-mart-search {
-  background-color: #2d2d30 !important;
-  padding: 12px !important;
-  border-bottom: 1px solid #464647 !important;
-  position: relative !important;
-}
-.emoji-mart-search input {
-  background-color: #2f2f2f !important;
-  border: 2px solid #2e2e2f !important;
-  border-bottom: 2px solid #9a9a9a !important;
-  border-radius: 4px !important;
-  color: #ffffff !important;
-  padding: 8px 12px 8px 36px !important;
-  font-size: 14px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  position: relative !important;
-}
-.emoji-mart-search input:hover {
-  background-color: #333333 !important;
-}
-.emoji-mart-search input::placeholder {
-  color: #999999 !important;
-}
-.emoji-mart-search input:focus {
-  border-bottom: 2px solid #4cc2ff !important;
-  background-color: #202020 !important;
-  outline: none !important;
-}
-
-/* Search icon inside textbox */
-.emoji-mart-search-icon {
-  left: -268px !important;
-  top: 20px !important;
-  pointer-events: none !important;
-  color: #999999 !important;
-  z-index: 2 !important;
-}
-
-.emoji-mart-search-icon svg {
-  width: 16px !important;
-  height: 16px !important;
-  fill: currentColor !important;
-}
-
-/* Emoji grid area */
-.emoji-mart-scroll {
-  background-color: #2d2d30 !important;
-  padding: 8px !important;
-}
-
-/* Category sections */
-.emoji-mart-category {
-  margin-bottom: 16px !important;
-}
-.emoji-mart-category-label {
-  color: #ffffff !important;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  padding: 8px 4px 4px 4px !important;
-  letter-spacing: 0.5px !important;
-  position: relative !important;
-}
-.emoji-mart-category-label > span {
-  background-color: transparent !important;
-}
-
-/* Emoji grid */
-.emoji-mart-category-list {
-  display: grid !important;
-  grid-template-columns: repeat(6, 1fr) !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  gap: 8px !important;
-}
-.emoji-mart-category-list li {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Individual emoji buttons */
-.emoji-mart-emoji {
-  background-color: transparent !important;
-  border: none !important;
-  border-radius: 4px !important;
-  padding: 6px !important;
-  cursor: pointer !important;
-  transition: background-color 0.15s ease-out !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 42px !important;
-  height: 42px !important;
-}
-.emoji-mart-emoji:hover {
-  background-color: #404040 !important;
-  border-radius: 4px !important;
-}
-
-/* Emoji characters */
-.emoji-mart-emoji span {
-  font-size: 26px !important;
-  line-height: 1 !important;
-  width: 26px !important;
-  height: 26px !important;
-  border-radius: 4px !important;
-  padding: 6px !important;
-}
-
-/* Emoji picker fonts */
-@import url("https://tetunori.github.io/fluent-emoji-webfont/dist/FluentEmojiColor.css");
-:root:not(.is-mac) .emoji-mart-emoji-native {
-  font-family: "Fluent Emoji Color", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif !important;
-}
-
-/* Scrollbar styling for emoji picker */
-.emoji-mart-scroll::-webkit-scrollbar {
-  width: 8px !important;
-}
-.emoji-mart-scroll::-webkit-scrollbar-track {
-  background-color: #2d2d30 !important;
-}
-.emoji-mart-scroll::-webkit-scrollbar-thumb {
-  background-color: #636363;
-  border-radius: 4px !important;
-}
-.emoji-mart-scroll::-webkit-scrollbar-thumb:hover {
-  background-color: #8f8f8f;
-}
-
-/*
-  ------
   Message Header (channel name, feedback button, info button)
   ------
 */
@@ -676,14 +488,14 @@ To open dev tools, open the command bar and type "open console"
   padding: 8px !important;
 }
 .thread-header-left:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
 /* Feedback button */
 .feedback-btn:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 .feedback-btn {
@@ -720,7 +532,7 @@ To open dev tools, open the command bar and type "open console"
 }
 .BrandChatInfoPaneHeader-module__button:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
@@ -733,7 +545,7 @@ To open dev tools, open the command bar and type "open console"
 }
 .BrandChatInfoPaneToolbar-module__button:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
@@ -754,7 +566,7 @@ To open dev tools, open the command bar and type "open console"
   > .BrandExpandableSection-module__container
   > .BrandExpandableSection-module__header
   > .BrandButton-module__link:hover {
-  color: #60cdff !important;
+  color: var(--color-primary) !important;
 }
 .BrandChatInfoPaneMedia-module__media {
   border-radius: 8px !important;
@@ -791,6 +603,16 @@ To open dev tools, open the command bar and type "open console"
 /* Remove header */
 .prefs-left-pane-heading {
   display: none !important;
+}
+
+.PlusPill-module__pill {
+  font-size: x-small !important;
+  background-color: var(--color-item-background) !important;
+  color: #ffffff !important;
+  margin-left: 6px !important;
+  border-radius: 4px !important;
+  align-items: center !important;
+  padding: 4px 8px !important;
 }
 
 /* Preferences left pane padding */
@@ -839,11 +661,28 @@ To open dev tools, open the command bar and type "open console"
 .pref-icon[style*="--color-solids-pink"] svg path {
   fill: var(--color-solids-pink) !important;
 }
+
+.pref-icon[style*="--color-primary"] svg path {
+  fill: var(--color-primary) !important;
+}
+
 .pref-icon[style*="rgb(117, 89, 255)"] svg path {
   color: rgb(117, 89, 255) !important;
 }
 .pref-icon[style*="rgb(183, 52, 244)"] svg path {
   color: rgb(183, 52, 244) !important;
+}
+.pref-icon[style*="rgb(52, 183, 244)"] svg path {
+  color: rgb(52, 183, 244) !important;
+}
+.pref-icon[style*="rgb(52, 183, 244)"] svg {
+  color: rgb(52, 183, 244) !important;
+  background-color: transparent !important;
+  stroke: rgb(52, 183, 244) !important;
+}
+.pref-icon[style*="rgb(244, 183, 52)"] svg path {
+  color: rgb(244, 183, 52) !important;
+  fill: rgb(244, 183, 52) !important;
 }
 .pref-icon[style*="rgb(50, 84, 106)"] svg path {
   fill: rgb(50, 84, 106) !important;
@@ -884,7 +723,7 @@ To open dev tools, open the command bar and type "open console"
   top: 50%;
   transform: translateY(-50%);
   left: 0px;
-  background-color: #60cdff;
+  background-color: var(--color-primary);
   animation: wui-h-center 0.3s 1;
 }
 
@@ -898,7 +737,7 @@ To open dev tools, open the command bar and type "open console"
 /* Hover effect for preference options */
 .pref-option:hover {
   backdrop-filter: blur(4px);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
 }
 
@@ -920,7 +759,7 @@ To open dev tools, open the command bar and type "open console"
 
 /* right pane style */
 .prefs-right-pane {
-  background-color: #202020 !important;
+  background-color: var(--color-base-black) !important;
   box-shadow: none !important;
   filter: none !important;
   border-radius: 0% !important;
@@ -929,17 +768,23 @@ To open dev tools, open the command bar and type "open console"
   color: white !important;
   padding: 0 0 0 0 !important;
   padding-bottom: 4px !important;
+  font-weight: 500 !important;
 }
+
+.prefs-right-pane > .subview-prefs > h4:not(:first-of-type) {
+  margin-top: 16px !important;
+}
+
 .prefs-group {
-  background-color: #202020 !important;
+  background-color: var(--color-base-black) !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 1px !important;
+  gap: 4px !important;
 }
 
 .prefs-group > .label-wrapper > label > div:first-child {
   color: white !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
 }
 
 /* Plus tag in preferences */
@@ -957,7 +802,7 @@ To open dev tools, open the command bar and type "open console"
   > label
   > div
   > .PlusPill-module__standard.plus-tag:hover {
-  background-color: #49b3ea !important;
+  background-color: var(--color-primary-hover) !important;
   color: var(--color-on-primary) !important;
 }
 
@@ -965,23 +810,175 @@ To open dev tools, open the command bar and type "open console"
   font-weight: 500 !important;
 }
 .prefs-group > .label-wrapper {
-  padding-top: 8px !important;
-  padding-bottom: 4px !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
   font-weight: bold !important;
   font-size: small !important;
   color: #a1a1a1 !important;
   backdrop-filter: blur(4px);
-  background-color: #2b2b2b !important;
+  background-color: var(--color-item-background) !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  border-radius: 4px !important;
+  font-weight: 400 !important;
 }
 .prefs-group > .label-wrapper:hover {
   backdrop-filter: blur(4px);
-  background-color: #323232 !important;
+  background-color: var(--color-item-background-hover) !important;
   overflow: hidden !important;
 }
 
 .prefs-group:not(:empty) {
+  border-radius: 6px !important;
+  border: 0px !important;
+}
+
+/* Accounts section */
+.prefs-right-pane > .subview-prefs > div > h4 {
+  color: white !important;
+  padding: 0 0 0 0 !important;
+  padding-bottom: 4px !important;
+  font-weight: 500 !important;
+}
+
+/* add a button instead of the + svg */
+.prefs-right-pane > .subview-prefs > div:has(h4) {
+  position: relative !important;
+}
+
+/* Target the div ONLY if it contains the "AddNewAccountIcon" */
+.prefs-right-pane > .subview-prefs > div:has(svg[data-sentry-component="AddNewAccountIcon"])::after {
+  content: "Add Account" !important;
+
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  background-color: var(--color-primary) !important;
+  color: #000000 !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  border: 1px solid var(--color-border) !important;
+
+  width: fit-content !important;
+}
+
+.prefs-right-pane > .subview-prefs > div:has(h4) > svg {
+  opacity: 0 !important;
+  position: absolute !important;
+
+  right: 0 !important;
+  top: 0 !important;
+
+  width: 110px !important;
+  height: 100% !important;
+
+  z-index: 10 !important;
+  cursor: pointer !important;
+}
+
+.prefs-right-pane > .subview-prefs > div:has(h4):hover::after {
+  background-color: var(--color-primary-hover) !important;
+  /* border color with opacity of 0.8 */
+  border-color: var(--color-primary-hover)cf !important;
+}
+
+.prefs-group > .AccountListItem-module__accountListItem {
+  border: 1px solid var(--color-item-background-border) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-weight: bold !important;
+  font-size: small !important;
+  color: #a1a1a1 !important;
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background) !important;
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
   border-radius: 4px !important;
+}
+.prefs-group > .AccountListItem-module__accountListItem:hover {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background-hover) !important;
+  overflow: hidden !important;
+}
+
+.AccountListItem-module__overflowText {
+  color: #ffffff !important;
+  font-weight: 400 !important;
+}
+
+.AddNewAccounts-module__addAnAccountLink {
+  font-size: 0 !important;
+  width: fit-content !important;
+  margin-bottom: 0px !important;
+  line-height: 1.2 !important;
+}
+
+.AddNewAccounts-module__addAnAccountLink::before {
+  content: "Add a new account" !important;
+  font-size: small !important;
+  font-weight: 400 !important;
+  color: #84c6d6 !important;
+}
+
+.AddNewAccounts-module__addAnAccountLink::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer !important;
+}
+
+div:has(> a.AddNewAccounts-module__addAnAccountLink) {
+  border: 1px solid var(--color-item-background-border) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-weight: bold !important;
+  font-size: small !important;
+  color: #a1a1a1 !important;
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background) !important;
+  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  border-radius: 4px !important;
+  cursor: pointer;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  position: relative !important;
+  gap: 0px !important;
+}
+
+div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background-hover) !important;
+  overflow: hidden !important;
+}
+
+.AddNewAccounts-module__accountsRemaining {
+  margin-top: 4px !important;
+}
+
+/* device list */
+.account-list-item > .pref-text > div > .BrandTooltip-module__container {
+  font-size: small !important;
+  color: #ffffff !important;
+}
+.account-list-item > .pref-text > .secondary {
+  font-size: x-small !important;
+  color: #bfbfbf !important;
+}
+
+.pref-text > div > span.tag {
+  font-size: x-small !important;
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+  margin-left: 6px !important;
+  border-radius: 2px !important;
 }
 
 /*
@@ -1010,7 +1007,7 @@ To open dev tools, open the command bar and type "open console"
 */
 .notification-prefs-account {
   backdrop-filter: blur(4px);
-  background-color: #2b2b2b !important;
+  background-color: var(--color-item-background) !important;
   border-radius: 4px !important;
   padding: 8px !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -1098,13 +1095,13 @@ To open dev tools, open the command bar and type "open console"
 }
 
 .Toasts-module__toastButtons button:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-item-background-hover) !important;
   border-color: rgba(255, 255, 255, 0.2);
 }
 
 .Toasts-module__toastButtons button:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-item-background-hover) !important;
   border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1183,10 +1180,10 @@ To open dev tools, open the command bar and type "open console"
 /* Switch ON state */
 .switch.on {
   border: 0;
-  background-color: #5bbde9;
+  background-color: var(--color-primary);
 }
 .switch.on:hover {
-  background-color: #49b3ea;
+  background-color: var(--color-primary-hover);
 }
 
 .switch.on .knob {
@@ -1211,26 +1208,86 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Dropdown Menus */
-.prefs-group > .label-wrapper > label > select {
+.label-wrapper > label > select {
+  background-color: #373737 !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 12px !important;
+  margin-right: 0px !important;
+  height: 32px !important;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  /* capitalize the first character */
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+  min-width: 192px !important;
+  font-size: 13px !important;
+
+  /* Custom arrow using background image */
+  background-image: url('data:image/svg+xml;utf8,<svg width="11" height="6" viewBox="0 0 11 6" fill="white" opacity="0.75" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.671875C0 0.578125 0.0182292 0.492188 0.0546875 0.414062C0.0911458 0.330729 0.138021 0.260417 0.195312 0.203125C0.257812 0.140625 0.328125 0.0911458 0.40625 0.0546875C0.489583 0.0182292 0.578125 0 0.671875 0C0.770833 0 0.856771 0.0182292 0.929688 0.0546875C1.0026 0.0859375 1.07292 0.135417 1.14062 0.203125L5.33594 4.39844L9.53125 0.203125C9.66667 0.0677083 9.82292 0 10 0C10.0938 0 10.1797 0.0182292 10.2578 0.0546875C10.3411 0.0911458 10.4115 0.140625 10.4688 0.203125C10.5312 0.260417 10.5807 0.330729 10.6172 0.414062C10.6536 0.492188 10.6719 0.578125 10.6719 0.671875C10.6719 0.854167 10.6068 1.01042 10.4766 1.14062L5.80469 5.8125C5.67448 5.94271 5.51823 6.00781 5.33594 6.00781C5.15365 6.00781 4.9974 5.94271 4.86719 5.8125L0.195312 1.14062C0.0651042 1.01042 0 0.854167 0 0.671875Z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 7px;
+}
+.label-wrapper > label > select:hover {
+  background-color: #3c3c3c !important;
+}
+.label-wrapper > label > select {
+  appearance: none; /* Hides default arrow */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+}
+
+/* Normal buttons */
+.btn-solid {
   background-color: #373737 !important;
   border: 2px solid #3a3a3a !important;
   border-radius: 4px !important;
   color: white !important;
   padding: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  margin-right: 10px !important;
   height: 32px !important;
-  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out,
+    color 0.2s ease-out;
   /* capitalize the first character */
   text-transform: capitalize !important;
 }
-.prefs-group > .label-wrapper > label > select:hover {
+.btn-solid:hover {
+  background-color: #3c3c3c !important;
+}
+
+/* Preferences buttons */
+.Preferences-module__connectButton {
+  background-color: #373737 !important;
+  border: 2px solid #3a3a3a !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  margin-right: 10px !important;
+  height: 32px !important;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out,
+    color 0.2s ease-out;
+  /* capitalize the first character */
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+}
+.Preferences-module__connectButton:hover {
   background-color: #3c3c3c !important;
 }
 
 /* Slider */
 .slider-wrapper {
   backdrop-filter: blur(4px);
-  background-color: #2b2b2b !important;
+  background-color: var(--color-item-background) !important;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  border-radius: 4px !important;
+  color: white !important;
 }
 
 input[type="range"] {
