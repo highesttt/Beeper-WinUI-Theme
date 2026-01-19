@@ -23,6 +23,8 @@ To open dev tools, open the command bar and type "open console"
   --font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
+
+  --version: "0.7"
 }
 
 /*
@@ -1361,6 +1363,17 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
 .TimeSuggestionsPreference-module__removeIcon {
   color: #ff4444 !important;
   transition: color 0.2s ease-out;
+}
+
+/* Theme version indicator */
+.prefs-left-pane-container::after {
+  content: "WinUI 3 Theme v" var(--version) !important;
+  display: block;
+  text-align: left;
+  font-size: 10px;
+  color: #a1a1a1;
+  margin-top: 20px;
+  padding: 10px 16px;
 }
 
 /*
