@@ -441,6 +441,24 @@ To open dev tools, open the command bar and type "open console"
   padding: 4px !important;
 }
 
+/* Deleted Messages text color & background */
+.bubble-mode .is-deleted .message-contents {
+  color: #ffffff !important;
+}
+.message-container.is-deleted:not(.is-pending) .message-contents {
+  background-color: transparent !important;
+  border: 1px dashed #5a5a5a !important;
+  margin-bottom: 2px !important;
+}
+.message-container.is-deleted:not(.is-pending) .message-contents .message-text-container > .message-text > span {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+
+
 /* Fix for message reactions */
 .message-reaction-container {
   border: none !important;
@@ -1076,7 +1094,7 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
 .Toasts-module__toastButtons {
   font-size: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
   gap: 8px;
 }
