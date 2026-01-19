@@ -329,6 +329,11 @@ To open dev tools, open the command bar and type "open console"
   margin-bottom: 2px !important;
 }
 
+/* Line height for thread titles */
+.ThreadListItem-module__title {
+  line-height: 1.2 !important;
+}
+
 /* Badge size */
 .account-badge-count {
   min-width: 12px !important;
