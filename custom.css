@@ -1152,6 +1152,44 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
 
 /*
   ------
+  Message Requests
+  ------
+*/
+.RequestNotice-module__container {
+  padding: 16px !important;
+  border-radius: 4px !important;
+  -webkit-backdrop-filter: blur(30px) saturate(125%);
+  backdrop-filter: blur(30px) saturate(125%);
+  background-color: rgba(32, 32, 32, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.RequestNotice-module__buttonContainer {
+  font-size: 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+}
+.RequestNotice-module__buttonContainer > button {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #f3f3f3;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.RequestNotice-module__buttonContainer > button:hover {
+  background-color: var(--color-item-background-hover) !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/*
+  ------
   Components
   ------
 */
