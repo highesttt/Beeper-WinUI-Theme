@@ -1,1 +1,19 @@
 @import url("https://cdn.jsdelivr.net/gh/highesttt/Beeper-WinUI-Theme@main/custom.css");
+
+:root {
+  --color-primary: #4cc2ff !important;
+  --color-primary-hover: #49b3ea !important;
+  --color-border: #3f9aca !important;
+  --color-base-black: #1f2021 !important;
+  --color-item-background: #2b2b2b !important;
+  --color-item-background-hover: #323232 !important;
+  --color-item-background-border: #1a1e20 !important;
+
+  --color-date-separator-background: #3a3a3a !important;
+  --color-date-separator-border: #2e2e2e !important;
+
+  --color-base-gray-30: var(--color-base-black) !important;
+  --font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  --color-on-primary: #000 !important;
+  --color-highlight-reaction: #56add500 !important;
+}
