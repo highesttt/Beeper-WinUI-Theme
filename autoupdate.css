@@ -17,3 +17,22 @@
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
 }
+
+/* ----
+  Emoji picker styling
+  ------
+*/
+em-emoji-picker {
+  --border-radius: 4px;
+  --category-icon-size: 20px;
+  --color-border-over: #636363;
+  --color-border: #474747;
+  --font-size: 12px;
+  --rgb-accent: 73, 179, 234; /* --color-primary-hover */
+  --rgb-background: 26, 30, 32; /* --color-item-background-border */
+  --rgb-color: 243, 243, 243; /* f3f3f3 */
+  --shadow: 5px 5px 15px -8px var(--color-item-background);
+  --preview-placeholder-size: 0px;
+  --preview-title-size: 0px;
+  --preview-subtitle-size: 0px;
+}

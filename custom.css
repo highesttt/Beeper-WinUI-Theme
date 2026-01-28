@@ -20,11 +20,31 @@ To open dev tools, open the command bar and type "open console"
   --color-date-separator-border: #2e2e2e !important;
 
   --color-base-gray-30: var(--color-base-black) !important;
-  --font-family: "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  --font-family:
+    "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
 
-  --version: "0.7.1"
+  --version: "0.8";
+}
+
+/* ----
+  Emoji picker styling
+  ------
+*/
+em-emoji-picker {
+  --border-radius: 4px;
+  --category-icon-size: 20px;
+  --color-border-over: #636363;
+  --color-border: #474747;
+  --font-size: 12px;
+  --rgb-accent: 73, 179, 234; /* --color-primary-hover */
+  --rgb-background: 26, 30, 32; /* --color-item-background-border */
+  --rgb-color: 243, 243, 243; /* f3f3f3 */
+  --shadow: 5px 5px 15px -8px var(--color-item-background);
+  --preview-placeholder-size: 0px;
+  --preview-title-size: 0px;
+  --preview-subtitle-size: 0px;
 }
 
 /*
@@ -131,7 +151,9 @@ To open dev tools, open the command bar and type "open console"
 
 /* Transition effect for footer buttons (settings and new account) */
 .left-pane-footer-buttons {
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
 }
 
 /* Footer icon sizes */
@@ -144,7 +166,9 @@ To open dev tools, open the command bar and type "open console"
 .left-pane-footer-buttons > .BrandTooltip-module__container > button {
   width: 36px !important;
   height: 32px !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
 }
 
 /* Footer button hover effect */
@@ -156,7 +180,9 @@ To open dev tools, open the command bar and type "open console"
 
 /* Transition and Border Radius when hovering icons */
 .sidebar-button {
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
 }
 
@@ -165,7 +191,9 @@ To open dev tools, open the command bar and type "open console"
   backdrop-filter: blur(4px);
   background-color: var(--color-item-background-hover) !important;
   border-radius: 4px !important;
-  transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition:
+    background-color 0.2s ease-out,
+    box-shadow 0.2s ease-out;
 }
 
 .brand-combined-icon.BrandNetworkIcon-module__brandNetworkIcon.AccountListPopupMenu-module__accountListPopupMenu {
@@ -212,7 +240,9 @@ To open dev tools, open the command bar and type "open console"
 
 /* Transition */
 .AccountFilters-module__button {
-  transition: color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
 }
 
 /* Focus effect for Inbox/Unread/Low Priority/Archived */
@@ -246,7 +276,9 @@ To open dev tools, open the command bar and type "open console"
 
 /* Filter */
 .AccountFilters-module__folders {
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   gap: 4px !important;
   display: flex !important;
@@ -260,7 +292,8 @@ To open dev tools, open the command bar and type "open console"
   font-weight: 400 !important;
 }
 
-.AccountFilters-module__buttonContainer.AccountFilters-module__selected .AccountFilters-module__labelButton {
+.AccountFilters-module__buttonContainer.AccountFilters-module__selected
+  .AccountFilters-module__labelButton {
   font-weight: 400 !important;
 }
 
@@ -272,7 +305,9 @@ To open dev tools, open the command bar and type "open console"
 
 /* Sidebar thread animation and border radius */
 .sidebar-thread {
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px;
 }
 
@@ -552,7 +587,9 @@ To open dev tools, open the command bar and type "open console"
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
-  transition: background-color 0.2s ease-out, border-radius 0.2s ease-out;
+  transition:
+    background-color 0.2s ease-out,
+    border-radius 0.2s ease-out;
 }
 
 .player-contents button:has(svg path[d^="M11.6667"]) {
@@ -577,7 +614,8 @@ To open dev tools, open the command bar and type "open console"
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -691,7 +729,11 @@ To open dev tools, open the command bar and type "open console"
   border: 1px dashed #5a5a5a !important;
   margin-bottom: 2px !important;
 }
-.message-container.is-deleted:not(.is-pending) .message-contents .message-text-container > .message-text > span {
+.message-container.is-deleted:not(.is-pending)
+  .message-contents
+  .message-text-container
+  > .message-text
+  > span {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -869,7 +911,9 @@ To open dev tools, open the command bar and type "open console"
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
-  transition: background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+  transition:
+    background-color 0.2s ease-out,
+    border-color 0.2s ease-out !important;
   color: white !important;
   box-shadow: none !important;
 }
@@ -890,7 +934,6 @@ To open dev tools, open the command bar and type "open console"
   width: 16px !important;
   height: 16px !important;
 }
-
 
 /*
   ------
@@ -918,6 +961,22 @@ To open dev tools, open the command bar and type "open console"
   font-size: x-small !important;
   background-color: var(--color-item-background) !important;
   color: #ffffff !important;
+  margin-left: 6px !important;
+  border-radius: 4px !important;
+  align-items: center !important;
+  padding: 4px 8px !important;
+}
+
+.PlusPill-module__reverse {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-hover)
+  ) !important;
+  color: var(--color-on-primary) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-size: x-small !important;
   margin-left: 6px !important;
   border-radius: 4px !important;
   align-items: center !important;
@@ -1008,7 +1067,9 @@ To open dev tools, open the command bar and type "open console"
 
 /* Preferences option transition and border radius */
 .pref-option {
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   height: 32px !important;
   margin-top: 2px !important;
@@ -1016,7 +1077,9 @@ To open dev tools, open the command bar and type "open console"
   border-bottom: 0px !important;
 }
 .pref-option-profile {
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   height: 48px !important;
   margin-bottom: 12px !important;
@@ -1104,7 +1167,9 @@ To open dev tools, open the command bar and type "open console"
   > .PlusPill-module__standard.plus-tag {
   background-color: var(--color-primary) !important;
   color: var(--color-on-primary) !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
 }
 .prefs-group
   > .label-wrapper
@@ -1127,7 +1192,9 @@ To open dev tools, open the command bar and type "open console"
   color: #a1a1a1 !important;
   backdrop-filter: blur(4px);
   background-color: var(--color-item-background) !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   font-weight: 400 !important;
 }
@@ -1162,7 +1229,7 @@ To open dev tools, open the command bar and type "open console"
   background-color: var(--color-base-black) !important;
 }
 .BrandInput-module__container:focus-within::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -1187,7 +1254,9 @@ To open dev tools, open the command bar and type "open console"
 }
 
 /* Target the div ONLY if it contains the "AddNewAccountIcon" */
-.prefs-right-pane > .subview-prefs > div:has(svg[data-sentry-component="AddNewAccountIcon"])::after {
+.prefs-right-pane
+  > .subview-prefs
+  > div:has(svg[data-sentry-component="AddNewAccountIcon"])::after {
   content: "Add Account" !important;
 
   display: inline-flex !important;
@@ -1221,8 +1290,7 @@ To open dev tools, open the command bar and type "open console"
 
 .prefs-right-pane > .subview-prefs > div:has(h4):hover::after {
   background-color: var(--color-primary-hover) !important;
-  /* border color with opacity of 0.8 */
-  border-color: var(--color-primary-hover)cf !important;
+  border-color: var(--color-primary-hover) cf !important;
 }
 
 .prefs-group > .AccountListItem-module__accountListItem {
@@ -1234,7 +1302,9 @@ To open dev tools, open the command bar and type "open console"
   color: #a1a1a1 !important;
   backdrop-filter: blur(4px);
   background-color: var(--color-item-background) !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
 }
 .prefs-group > .AccountListItem-module__accountListItem:hover {
@@ -1282,7 +1352,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink) {
   color: #a1a1a1 !important;
   backdrop-filter: blur(4px);
   background-color: var(--color-item-background) !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   cursor: pointer;
   display: flex !important;
@@ -1333,7 +1405,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   background: var(--color-item-background) !important;
   border-radius: 4px !important;
   padding: 8px !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border: 1px solid var(--color-item-background-border) !important;
 }
 
@@ -1412,6 +1486,329 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
 
 /*
   ------
+  Theme selection buttons in Preferences
+  ------
+*/
+.prefs-action-group {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 16px 0 !important;
+}
+
+.theme-hue-button {
+  width: 32px !important;
+  height: 32px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.theme-hue-button:hover {
+  backdrop-filter: blur(4px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  opacity: 0.9 !important;
+}
+
+.theme-hue-button.selected {
+  box-shadow:
+    0 0 0 1px var(--color-primary),
+    0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-hue-button.monochrome {
+  background: hsl(var(--theme-hue, 0), 70%, 50%) !important;
+}
+
+.theme-hue-button.monochrome.theme-monochrome-unset {
+  background: var(--color-item-background) !important;
+}
+
+.theme-hue-button.rich {
+  background: linear-gradient(
+    135deg,
+    var(--theme-rich-from),
+    var(--theme-rich-to)
+  ) !important;
+}
+
+.theme-hue-button:focus {
+  outline: none !important;
+}
+
+.theme-hue-button::after {
+  display: none !important;
+}
+
+.theme-button {
+  display: flex !important;
+  align-items: center !important;
+  background: var(--color-item-background) !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  font-family: var(--font-family) !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.theme-button:hover:not(:disabled) {
+  background: var(--color-item-background-hover) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+.theme-button img {
+  scale: 0.8 !important;
+}
+
+.theme-button span {
+  white-space: nowrap !important;
+}
+
+/*
+  ------
+  Subscription prompt pane styling
+  ------
+*/
+.beeper-plus-prefs {
+  position: relative !important;
+  font-family: var(--font-family) !important;
+}
+
+.subscription-prompt {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background: var(--color-base-black) !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  z-index: 1000 !important;
+  box-shadow: none !important;
+  max-width: calc(100% - 20px) !important;
+  max-height: calc(100% - 20px) !important;
+  overflow-y: auto !important;
+}
+
+.modal:has(.modal-inner) {
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: auto !important;
+  overflow: visible !important;
+  position: static !important;
+  padding: 0 !important;
+}
+
+.subscription-smile {
+  display: none !important;
+}
+
+.modal-inner {
+  padding: 0 !important;
+}
+
+.subscription-header {
+  text-align: center !important;
+  margin-bottom: 12px !important;
+}
+
+.subscription-header h1 {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin: 4px 0 0 0 !important;
+}
+
+.unlimited-toggle {
+  background-color: var(--color-item-background) !important;
+  font-size: 12px !important;
+  margin: 4px 0 12px 0 !important;
+  text-align: center !important;
+  border-radius: 4px !important;
+}
+
+.unlimited-toggle:hover {
+  background-color: var(--color-item-background-hover) !important;
+}
+
+.subscription-current-features {
+  border: dashed 1px var(--color-border) !important;
+  border-radius: 4px !important;
+}
+
+.subscription-features::before {
+  content: "You already have these features:" !important;
+  display: block !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  margin-bottom: 8px !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.subscription-features > ol:not(:first-of-type)::before {
+  content: "With Beeper Plus, you get the following:" !important;
+  display: block !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  margin-bottom: 8px !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.subscription-features > ol:not(:first-of-type) {
+  margin-top: 16px !important;
+  border: 1px solid transparent !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+.subscription-features > ol:first-of-type {
+  margin-top: 0 !important;
+  padding: 6px !important;
+}
+
+.subscription-current-features::before {
+  display: none !important;
+}
+
+.subscription-features ol {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+
+.subscription-features li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 6px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+
+.subscription-features p {
+  font-weight: 400 !important;
+}
+
+.subscription-features svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0 !important;
+  color: var(--color-primary) !important;
+}
+
+.subscription-cta {
+  text-align: center !important;
+  border-top: 1px solid var(--color-border) !important;
+  padding-top: 12px !important;
+}
+
+.unlimited-toggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-bottom: 6px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+}
+
+.unlimited-toggle::before {
+  content: "Unlimited Plan:" !important;
+}
+
+.unlimited-toggle input[type="checkbox"] {
+  display: none !important;
+}
+
+.unlimited-toggle p {
+  width: 42px !important;
+  height: 21px !important;
+  background: #24282b !important;
+  border: 0.08rem solid rgb(133, 133, 133) !important;
+  border-radius: 34px !important;
+  position: relative !important;
+  transition: all 0.2s ease !important;
+  margin: 0 0 0 0 !important;
+  font-size: 0 !important;
+}
+
+.unlimited-toggle input[type="checkbox"]:checked + p {
+  background: var(--color-primary) !important;
+  border: 0 !important;
+}
+
+.unlimited-toggle p::before {
+  content: "" !important;
+  width: 13px !important;
+  height: 13px !important;
+  background: #d2d2d2 !important;
+  border-radius: 50% !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 3px !important;
+  transform: translateY(-45%) !important;
+  transition: transform 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.unlimited-toggle input[type="checkbox"]:checked + p::before {
+  transform: translateX(21px) translateY(-50%) !important;
+  background: #000000 !important;
+}
+
+.subscription-cta p {
+  color: #cccccc !important;
+  margin: 4px 0 4px 0 !important;
+}
+
+.subscription-button {
+  background: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 8px 16px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 8px !important;
+}
+
+.subscription-button:hover {
+  background: var(--color-primary-hover) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.subscription-prompt .modal .modal-inner {
+  gap: 0px !important;
+}
+
+/*
+  ------
   Notification preferences
   ------
 */
@@ -1420,7 +1817,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   background-color: var(--color-item-background) !important;
   border-radius: 4px !important;
   padding: 8px !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
 }
 .notification-prefs-account-header {
   display: flex !important;
@@ -1501,7 +1900,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   border-radius: 6px;
   padding: 6px 12px;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .Toasts-module__toastButtons button:hover {
@@ -1573,7 +1974,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   border-radius: 6px;
   padding: 6px 12px;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 .RequestNotice-module__buttonContainer > button:hover {
   background-color: var(--color-item-background-hover) !important;
@@ -1668,7 +2071,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   padding-right: 12px !important;
   margin-right: 0px !important;
   height: 32px !important;
-  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  transition:
+    border-color 0.2s ease-out,
+    box-shadow 0.2s ease-out;
   /* capitalize the first character */
   text-transform: capitalize !important;
   font-weight: 400 !important;
@@ -1694,7 +2099,6 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   -moz-appearance: none; /* Firefox */
 }
 
-
 .label-wrapper > label > div > select,
 .label-wrapper > label > div > span > select {
   min-width: 0px !important;
@@ -1713,7 +2117,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   padding-right: 8px !important;
   margin-right: 10px !important;
   height: 32px !important;
-  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out,
+  transition:
+    border-color 0.2s ease-out,
+    box-shadow 0.2s ease-out,
     color 0.2s ease-out;
   /* capitalize the first character */
   text-transform: capitalize !important;
@@ -1733,7 +2139,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   padding-right: 8px !important;
   margin-right: 10px !important;
   height: 32px !important;
-  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out,
+  transition:
+    border-color 0.2s ease-out,
+    box-shadow 0.2s ease-out,
     color 0.2s ease-out;
   /* capitalize the first character */
   text-transform: capitalize !important;
@@ -1747,7 +2155,9 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
 .slider-wrapper {
   backdrop-filter: blur(4px);
   background-color: var(--color-item-background) !important;
-  transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  transition:
+    background-color 0.3s ease-out,
+    box-shadow 0.3s ease-out;
   border-radius: 4px !important;
   color: white !important;
 }
@@ -1846,4 +2256,296 @@ input[type="range"]::-webkit-slider-thumb {
     left: 0;
     width: 100%;
   }
+}
+
+/* Main container for Add New Accounts modal */
+.modal-container:has(> section.AddNewAccounts-module__modalContainer) {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-base-black) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.AddNewAccounts-module__modalContainer {
+  background-color: var(--color-base-black) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Add an account + remaining count header */
+.AddNewAccounts-module__modalContainer > .AddNewAccounts-module__modalHeader {
+  border-bottom: 1px solid var(--color-item-background-border) !important;
+  backdrop-filter: blur(4px);
+  background-color: transparent !important;
+  border-radius: 4px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalSection
+  > .AddNewAccounts-module__modalRow {
+  cursor: pointer !important;
+}
+
+/* Category sections */
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalSection {
+  backdrop-filter: blur(4px);
+  background-color: transparent !important;
+  border-radius: 4px !important;
+}
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalSection:not(:first-of-type) {
+  margin-top: 16px !important;
+}
+
+/* Account list items */
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  border-radius: 4px !important;
+}
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem:has(button:disabled) {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem:hover:not(:has(button:disabled)) {
+  background-color: var(--color-item-background-hover) !important;
+  overflow: hidden !important;
+}
+.AddNewAccounts-module__modalContainer
+  > div
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem
+  > button:hover:not(:disabled) {
+  cursor: pointer !important;
+}
+
+/* Upgrade section */
+.AddNewAccounts-module__modalContainer > .AddNewAccounts-module__modalSection {
+  padding: 16px !important;
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background) !important;
+  border-radius: 4px !important;
+}
+
+.AddNewAccounts-module__modalContainer
+  > .AddNewAccounts-module__modalSection
+  > .AddNewAccounts-module__modalUpgrade {
+  background-color: var(--color-primary) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 4px !important;
+  color: var(--color-on-primary) !important;
+  padding: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  height: 32px !important;
+  transition:
+    border-color 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    color 0.2s ease-out;
+  font-weight: 400 !important;
+  cursor: pointer !important;
+}
+.AddNewAccounts-module__modalContainer
+  > .AddNewAccounts-module__modalSection
+  > .AddNewAccounts-module__modalUpgrade:hover {
+  background-color: var(--color-primary-hover) !important;
+}
+
+/* account list items under the upgrade section */
+.AddNewAccounts-module__modalContainer > .AddNewAccounts-module__modalList {
+  margin-top: 12px !important;
+}
+.AddNewAccounts-module__modalContainer
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem
+  > button:disabled {
+  cursor: not-allowed !important;
+}
+.AddNewAccounts-module__modalContainer
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem:has(button:disabled) {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+.AddNewAccounts-module__modalContainer
+  > .AddNewAccounts-module__modalList
+  > .AccountListItem-module__accountListItem {
+  backdrop-filter: blur(4px);
+  background-color: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  border-radius: 4px !important;
+}
+
+/* ------------------------------
+   Feedback form (styled to match theme)
+   ------------------------------ */
+.feedback-form {
+  display: block !important;
+  background: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px !important;
+  color: #ffffff !important;
+  max-width: 680px !important;
+}
+
+.feedback-input-container {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+}
+
+.feedback-input {
+  flex: 1 1 auto !important;
+}
+
+.feedback-header h5 {
+  margin: 0 0 6px 0 !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.feedback-input textarea {
+  width: 100% !important;
+  min-height: 72px !important;
+  max-height: 240px !important;
+  resize: vertical !important;
+  padding: 10px !important;
+  background: var(--color-base-black) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  font-family: var(--font-family) !important;
+}
+
+.feedback-input textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 4px rgba(76, 194, 255, 0.06) !important;
+}
+
+.feedback-controls {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 8px !important;
+  bottom: 28px !important;
+}
+
+.feedback-emojis {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.feedback-emoji-button {
+  background: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  padding: 6px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  color: inherit !important;
+}
+
+.feedback-emoji-button:hover {
+  background: var(--color-item-background-hover) !important;
+}
+
+.feedback-button button[type="submit"] {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-hover)
+  ) !important;
+  color: var(--color-on-primary) !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+}
+
+.feedback-button button[type="submit"]:hover {
+  filter: brightness(0.98) !important;
+}
+
+.feedback-button .attachment-button {
+  background: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  padding: 8px !important;
+  border-radius: 6px !important;
+  margin-left: 8px !important;
+  cursor: pointer !important;
+  color: #ffffff !important;
+}
+
+.feedback-button .attachment-button svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: #ffffff !important;
+}
+
+input[type="file"][style*="display: none"] {
+  display: none !important;
+}
+
+.problem-modal-button {
+  background: transparent !important;
+  color: #a1a1a1 !important;
+  border: none !important;
+  padding: 8px 0 0 0 !important;
+  cursor: pointer !important;
+  text-decoration: underline !important;
+  font-size: 13px !important;
+}
+
+.problem-modal-button:hover {
+  color: #ffffff !important;
+}
+
+@media (max-width: 520px) {
+  .feedback-input-container {
+    flex-direction: column !important;
+  }
+  .feedback-button {
+    display: flex !important;
+    gap: 8px !important;
+  }
+}
+
+.report-problem-form-container > form > button {
+  border-radius: 4px !important;
+  cursor: pointer !important;
+}
+.report-problem-form-container > form > button.primary {
+  background: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+}
+.report-problem-form-container > form > button.primary:hover {
+  background: var(--color-primary-hover) !important;
 }
