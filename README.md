@@ -4,11 +4,6 @@
 
 This Beeper WinUI 3 Theme changes the theme of the Beeper Desktop application to match the WinUI 3 design language.
 
-> [!NOTE]
-> The new Beeper Desktop update (I do not know when this was introduced) introduced a new Emoji Picker, which broke the Emoji Picker styling.
-> I am not able to find a way to fix this, it uses Shadow DOM styling which doesn't make it as easy to style these components.
-> If you find a way to style the Emoji Picker, feel free to open an issue or a pull request.
-
 ## Installation 🚀
 
 1. Download the [latest](https://github.com/highesttt/Beeper-WinUI-Theme/releases/latest) release's custom.css file
