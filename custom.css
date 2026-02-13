@@ -25,7 +25,7 @@ To open dev tools, open the command bar and type "open console"
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
 
-  --version: "0.8";
+  --version: "0.8.1";
 }
 
 /* ----
@@ -563,7 +563,244 @@ em-emoji-picker {
 .message-attachments video,
 .message-attachments img {
   border-radius: 4px !important;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px !important;
+  box-shadow: none !important;
+}
+
+/* Attachment link (binary/file) styling */
+.message-attachments-container {
+  padding-top: 6px !important;
+}
+
+.message-attachments a.binary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  color: #fff !important;
+  padding: 8px 10px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  transition:
+    background-color 0.18s ease-out,
+    border-color 0.18s ease-out !important;
+}
+
+.message-attachments a.binary svg {
+  width: 18px !important;
+  height: 18px !important;
+  flex: 0 0 18px !important;
+  color: var(--color-primary) !important;
+}
+
+.message-attachments a.binary:hover,
+.message-attachments a.binary:focus {
+  background: var(--color-item-background-hover) !important;
+  border-color: color-mix(
+    in srgb,
+    var(--color-border) 18%,
+    transparent
+  ) !important;
+  outline: none !important;
+}
+
+.message-attachments a.binary .filename {
+  font-size: 13px !important;
+  color: #fff !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.message-attachments a.binary .meta {
+  font-size: 12px !important;
+  color: #a1a1a1 !important;
+}
+
+/* Link preview (cards) */
+.LinkPreview-module__container {
+  background: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  border-radius: 4px !important;
+  padding: 6px !important;
+  display: inline-flex !important;
+  gap: 8px !important;
+  align-items: flex-start !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  max-width: 480px !important;
+  box-sizing: border-box !important;
+  line-height: normal !important;
+  overflow: visible !important;
+}
+
+.LinkPreview-module__container:hover,
+.LinkPreview-module__container:focus {
+  background: var(--color-item-background-hover) !important;
+  border-color: color-mix(
+    in srgb,
+    var(--color-border) 18%,
+    transparent
+  ) !important;
+}
+
+.LinkPreview-module__linkImg,
+.enhanced-img {
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  flex: 0 0 auto !important;
+  max-width: 300px !important;
+  width: auto !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  margin-top: 0 !important;
+}
+
+.LinkPreview-module__linkImg img,
+.enhanced-img img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+.LinkPreview-module__content {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+.LinkPreview-module__content > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.LinkPreview-module__title {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: normal !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  margin-left: 2px !important;
+}
+
+.LinkPreview-module__summary {
+  color: #a1a1a1 !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  margin-left: 2px !important;
+}
+
+.LinkPreview-module__metadata {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.LinkPreview-module__host {
+  color: #a1a1a1 !important;
+  font-size: 12px !important;
+  display: flex !important;
+  gap: 6px !important;
+  align-items: center !important;
+}
+
+.LinkPreview-module__host svg {
+  width: 12px !important;
+  height: 12px !important;
+  color: var(--color-primary) !important;
+}
+
+/* PDF attachment preview */
+.pdf-message {
+  display: inline-flex !important;
+  gap: 10px !important;
+  align-items: flex-start !important;
+  background: var(--color-item-background) !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  border-radius: 4px !important;
+  padding: 8px !important;
+}
+
+.pdf-message .pdf-preview {
+  background: #fff !important;
+  border-radius: 2px !important;
+  width: 77px !important;
+  height: 100px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.pdf-message .pdf-preview .react-pdf__Document,
+.pdf-message .pdf-preview .react-pdf__Page {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.pdf-message .pdf-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+}
+
+.pdf-message .pdf-meta > div {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.pdf-message .pdf-meta span {
+  color: #ffffff !important;
+  font-size: 13px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.pdf-message .pdf-meta button {
+  background: transparent !important;
+  border: none !important;
+  color: var(--color-primary) !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 2px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  flex: 0 0 auto !important;
+}
+
+.pdf-message .pdf-meta button svg {
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.pdf-message .pdf-meta button:hover {
+  background: var(--color-item-background-hover) !important;
 }
 
 /* Audio player (voice messages) */
@@ -2099,6 +2336,43 @@ div:has(> a.AddNewAccounts-module__addAnAccountLink):hover {
   -moz-appearance: none; /* Firefox */
 }
 
+/* MultiSelectComboBox trigger */
+.MultiSelectComboBox-module__trigger {
+  background-color: #373737 !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 4px 10px !important;
+  height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 192px !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+}
+
+.MultiSelectComboBox-module__trigger .MultiSelectComboBox-module__triggerLabel {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  padding-right: 12px !important;
+  font-size: 13px !important;
+}
+
+/* Disabled state should look consistent but muted */
+.MultiSelectComboBox-module__trigger.MultiSelectComboBox-module__disabled {
+  background-color: #2f2f2f !important;
+  border-color: #323232 !important;
+  color: #a1a1a1 !important;
+  cursor: default !important;
+}
+
+.MultiSelectComboBox-module__trigger.MultiSelectComboBox-module__disabled
+  .MultiSelectComboBox-module__triggerLabel {
+  color: #a1a1a1 !important;
+}
+
 .label-wrapper > label > div > select,
 .label-wrapper > label > div > span > select {
   min-width: 0px !important;
@@ -2244,6 +2518,66 @@ input[type="range"]::-webkit-slider-thumb {
   100% {
     height: 34px;
   }
+}
+
+/* radio buttons */
+input[type="radio"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 8px 0 0 !important;
+  vertical-align: middle !important;
+  border-radius: 50% !important;
+  border: 1px solid rgb(133, 133, 133) !important;
+  background: #24282b !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition:
+    border-color 0.15s ease-out,
+    background 0.15s ease-out,
+    box-shadow 0.15s ease-out !important;
+}
+
+input[type="radio"]:hover {
+  background-color: #3b3b3b !important;
+}
+
+input[type="radio"]:focus-visible {
+  outline: none !important;
+}
+
+input[type="radio"]:checked {
+  border-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+}
+
+input[type="radio"]:checked::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: var(--color-on-primary, #000) !important;
+  display: block !important;
+}
+
+input[type="radio"]:disabled {
+  background: #2f2f2f !important;
+  border-color: #323232 !important;
+  cursor: default !important;
+}
+
+label::before,
+label::after {
+  display: none !important;
 }
 
 /* Expand border animation for input focus */
