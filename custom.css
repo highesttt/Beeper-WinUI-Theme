@@ -25,7 +25,7 @@ To open dev tools, open the command bar and type "open console"
   --color-on-primary: #000 !important;
   --color-highlight-reaction: #56add500 !important;
 
-  --version: "0.8.1";
+  --version: "0.9";
 }
 
 /* ----
@@ -178,6 +178,43 @@ em-emoji-picker {
   border-radius: 4px !important;
 }
 
+/* Overflow "more" button */
+.sidebar-button-container--overflow {
+  height: auto !important;
+  width: 36px !important;
+  padding-bottom: 2px !important;
+  padding-top: 2px !important;
+  padding-right: 0 !important;
+}
+
+.sidebar-button-container--overflow .sidebar-button {
+  width: 36px !important;
+  height: 32px !important;
+}
+
+.sidebar-button-container--overflow .sidebar-button button {
+  width: 36px !important;
+  height: 32px !important;
+}
+
+.sidebar-button-container--overflow .sidebar-button:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Settings avatar in footer */
+.left-pane-footer-buttons .settings-avatar {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+}
+
+/* Footer icon sizing for material icons */
+.left-pane-footer-buttons .PlatformIcon-module__materialIcon {
+  width: 18px !important;
+  height: 18px !important;
+}
+
 /* Transition and Border Radius when hovering icons */
 .sidebar-button {
   transition:
@@ -207,6 +244,32 @@ em-emoji-picker {
   Message threads (chats) header
   ------
 */
+
+/* Tab bar buttons (filter, search, new chat) */
+.tab-bar-btn {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.tab-bar-btn button {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 4px !important;
+}
+
+.tab-bar-btn .PlatformIcon-module__materialIcon {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.tab-bar-btn .PlatformIcon-module__materialIcon svg {
+  width: 18px !important;
+  height: 18px !important;
+}
 
 /* Hover effect for the tab bar (search and new chat) */
 .BrandTooltip-module__container.tab-bar-btn:hover {
@@ -566,6 +629,30 @@ em-emoji-picker {
   box-shadow: none !important;
 }
 
+/* Inline images in message text (embeds, quotes) */
+.message-text img:not(.custom-emoji img) {
+  border-radius: 4px !important;
+}
+
+/* Custom emoji in messages */
+.enhanced-img.custom-emoji {
+  display: inline-flex !important;
+  vertical-align: middle !important;
+}
+
+.enhanced-img.custom-emoji img {
+  height: 1.5em !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
+/* Small footer icons in embed footers (e.g. X logo) */
+sub .enhanced-img.custom-emoji img {
+  height: 1em !important;
+}
+
 /* Attachment link (binary/file) styling */
 .message-attachments-container {
   padding-top: 6px !important;
@@ -647,11 +734,12 @@ em-emoji-picker {
 }
 
 .LinkPreview-module__linkImg,
-.enhanced-img {
+.enhanced-img:not(.custom-emoji) {
   border-radius: 4px !important;
   overflow: hidden !important;
   flex: 0 0 auto !important;
   max-width: 300px !important;
+  max-height: 200px !important;
   width: auto !important;
   height: auto !important;
   box-sizing: border-box !important;
@@ -659,11 +747,13 @@ em-emoji-picker {
 }
 
 .LinkPreview-module__linkImg img,
-.enhanced-img img {
+.enhanced-img:not(.custom-emoji) img {
   display: block !important;
-  width: 100% !important;
+  max-width: 100% !important;
+  max-height: 200px !important;
+  width: auto !important;
   height: auto !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
 }
 
 .LinkPreview-module__content {
@@ -1218,6 +1308,174 @@ em-emoji-picker {
   border-radius: 4px !important;
   align-items: center !important;
   padding: 4px 8px !important;
+}
+
+/* Preferences search bar */
+.prefs-search-gutter {
+  padding: 0 8px !important;
+  margin-bottom: 12px !important;
+  overflow: visible !important;
+}
+
+.prefs-search-gutter .prefs-search-input {
+  position: relative !important;
+  border-radius: 4px !important;
+  border-top: 1px solid #2e2e2f !important;
+  border-left: 1px solid #2e2e2f !important;
+  border-right: 1px solid #2e2e2f !important;
+  border-bottom: 2px solid #9a9a9a !important;
+  background-color: #2f2f2f !important;
+  padding: 6px 10px !important;
+  margin-bottom: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.prefs-search-input:hover {
+  background-color: #333333 !important;
+}
+
+.prefs-search-input:focus-within {
+  background-color: var(--color-base-black) !important;
+}
+
+.prefs-search-input:focus-within::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 0 0 11px 11px;
+  animation: expand-border 0.3s ease-out forwards;
+}
+
+.prefs-search-input .PlatformIcon-module__materialIcon {
+  color: #a1a1a1 !important;
+  flex-shrink: 0 !important;
+}
+
+.prefs-search-input input {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+  font-size: 13px !important;
+  font-family: var(--font-family) !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.prefs-search-input input::placeholder {
+  color: #a1a1a1 !important;
+}
+
+/* Preferences search suggestions */
+.prefs-search-suggestions {
+  background: var(--color-base-black) !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--color-item-background-border) !important;
+  margin: 4px 8px 8px !important;
+  overflow: hidden !important;
+}
+
+.suggestions-header {
+  padding: 8px 10px 4px !important;
+}
+
+.suggestions-header-label {
+  color: #a1a1a1 !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.suggestions-header-spacer {
+  display: none !important;
+}
+
+.suggestion-row {
+  display: flex !important;
+  align-items: center !important;
+  padding: 6px 10px !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease-out !important;
+  color: white !important;
+  position: relative !important;
+}
+
+.suggestion-row:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.suggestion-row.selected {
+  background-color: var(--color-item-background-hover) !important;
+}
+
+.suggestion-row.selected .suggestion-label {
+  color: var(--color-primary) !important;
+}
+
+.suggestion-icon {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.suggestion-icon-spacer {
+  width: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+.suggestion-label {
+  font-family: var(--font-family) !important;
+  font-size: 13px !important;
+}
+
+/* Preferences search results */
+.pref-search-results .search-result-item {
+  padding: 4px 10px 4px 36px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease-out !important;
+  border-radius: 4px !important;
+  margin: 1px 0 !important;
+}
+
+.pref-search-results .search-result-item:hover {
+  background-color: var(--color-item-background-hover) !important;
+}
+
+.pref-search-results .search-result-item.focused {
+  background-color: var(--color-item-background-hover) !important;
+}
+
+.pref-search-results .search-result-label {
+  color: #c8c8c8 !important;
+  font-size: 12px !important;
+  font-family: var(--font-family) !important;
+}
+
+.pref-search-results .search-result-item.focused .search-result-label {
+  color: var(--color-primary) !important;
+}
+
+.pref-search-results mark {
+  background-color: transparent !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+}
+
+.pref-search-results .pref-option.search-no-match {
+  opacity: 0.4 !important;
 }
 
 /* Preferences left pane padding */
